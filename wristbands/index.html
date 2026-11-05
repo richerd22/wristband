@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How Festival Wristbands Work: RFID, Cashless, Activation and Refunds | The Wristband</title>
+<meta name="description" content="The band on your wrist is mostly a number. The chip inside carries a unique ID that the festival looks up in its own database every time you tap or walk...">
+<link rel="canonical" href="https://wristband.cold.fyi/wristbands/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#f7f2e7">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="How Festival Wristbands Work: RFID, Cashless, Activation and Refunds | The Wristband"><meta property="og:description" content="The band on your wrist is mostly a number. The chip inside carries a unique ID that the festival looks up in its own database every time you tap or walk...">
+<meta property="og:url" content="https://wristband.cold.fyi/wristbands/"><meta property="og:image" content="https://wristband.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/league-gothic-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "How Festival Wristbands Work: RFID, Cashless, Activation and Refunds", "description": "The band on your wrist is mostly a number. The chip inside carries a unique ID that the festival looks up in its own database every time you tap or walk...", "url": "https://wristband.cold.fyi/wristbands/", "image": "https://wristband.cold.fyi/og.png", "datePublished": "2026-11-05", "dateModified": "2026-11-05", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "The Wristband", "url": "https://wristband.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Wristband", "item": "https://wristband.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "Wristbands, cashless and the gate", "item": "https://wristband.cold.fyi/wristbands/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do festival RFID wristbands work?", "acceptedAnswer": {"@type": "Answer", "text": "The chip in the band carries a unique ID number that readers look up in the festival's database at gates and bars. NFC chips read at about 4 cm for payments, and UHF chips read at about 1-6 m for fast gate entry, according to vendor guides."}}, {"@type": "Question", "name": "Do festival wristbands track your location?", "acceptedAnswer": {"@type": "Answer", "text": "Vendors and festivals say no: bands are read only at scanners, and splash! Festival says its chips have no GPS. They do leave a record of each gate scan and, on cashless sites, each purchase."}}, {"@type": "Question", "name": "Can you take a festival wristband off and put it back on?", "acceptedAnswer": {"@type": "Answer", "text": "No. Most fabric bands use a one-way lock that tightens but cannot loosen, and festivals such as Hinterland (2026) say removing or tampering with a band voids entry."}}, {"@type": "Question", "name": "What happens if I cut my festival wristband?", "acceptedAnswer": {"@type": "Answer", "text": "It is usually void, and you need a replacement at the box office with photo ID. Hinterland's 2026 policy allows one replacement for $25, for the original purchaser only."}}, {"@type": "Question", "name": "How do I get a refund of my cashless festival balance?", "acceptedAnswer": {"@type": "Answer", "text": "Request it online after the festival, inside the published window. Fees in 2025-2026 examples ran from 0.50 euros at splash! to 3.50 euros at Dour, and Dour says unclaimed credit after its deadline is lost."}}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'League Gothic';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/league-gothic-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/newsreader-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/newsreader-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/newsreader-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Martian Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/martian-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Martian Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/martian-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: festival paper - a woven wristband hero drawn in code, lineup-poster typography (League Gothic) for contents and headings, backstage-pass reading paths, Newsreader body, Martian Mono data; night mode is the field under UV light */
+:root{
+  color-scheme:light;
+  --bg:#f7f2e7; --panel:#fffcf5; --panel2:#efe7d6; --ink:#16131c; --muted:#5f5867; --line:#ddd3c0;
+  --tape:#ff4d1a; --tape-ink:#16131c; --hot:#e0185e; --cue:#5a2bd6; --sign:#ff4d1a; --sign-ink:#16131c;
+  --ink-on:#ffffff; --ink-on-y:#16131c; --band:#ff4d1a; --band2:#d93a10; --thread:#fff3dc; --uv:#5a2bd6;
+  --u-red:#e0185e; --u-yel:#c99400; --u-org:#ff4d1a; --u-blu:#2d5bdc; --u-grn:#1f8f5a; --u-pur:#6a35d9; --u-pnk:#e0187f; --u-wht:#7a7184;
+  --s1:var(--u-grn); --s2:var(--u-blu); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pnk);
+  --f-display:"League Gothic","Arial Narrow",Impact,sans-serif;
+  --f-body:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-mono:"Martian Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-mono);
+  --measure:68ch; --wide:1040px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#0b0713; --panel:#140d22; --panel2:#1c1430; --ink:#efe9ff; --muted:#a79fbd; --line:#2c2244;
+  --tape:#c6ff3d; --tape-ink:#0b0713; --hot:#ff3ec8; --cue:#7fe3ff; --sign:#c6ff3d; --sign-ink:#0b0713;
+  --ink-on:#0b0713; --ink-on-y:#0b0713; --band:#ff3ec8; --band2:#b81f8d; --thread:#c6ff3d; --uv:#c6ff3d;
+  --u-red:#ff4f86; --u-yel:#ffe14d; --u-org:#ff9a3d; --u-blu:#7fe3ff; --u-grn:#c6ff3d; --u-pur:#b98cff; --u-pnk:#ff3ec8; --u-wht:#d6cfe8;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0b0713; --panel:#140d22; --panel2:#1c1430; --ink:#efe9ff; --muted:#a79fbd; --line:#2c2244;
+  --tape:#c6ff3d; --tape-ink:#0b0713; --hot:#ff3ec8; --cue:#7fe3ff; --sign:#c6ff3d; --sign-ink:#0b0713;
+  --ink-on:#0b0713; --ink-on-y:#0b0713; --band:#ff3ec8; --band2:#b81f8d; --thread:#c6ff3d; --uv:#c6ff3d;
+  --u-red:#ff4f86; --u-yel:#ffe14d; --u-org:#ff9a3d; --u-blu:#7fe3ff; --u-grn:#c6ff3d; --u-pur:#b98cff; --u-pnk:#ff3ec8; --u-wht:#d6cfe8;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:12px;padding:1.4rem 1.4rem 1.3rem;color:#e8ecf5;overflow:hidden;background:#070b18;border:1px solid #26314f;min-height:15rem;display:flex;flex-direction:column;justify-content:flex-end}
+.sign .wf{position:absolute;inset:0;opacity:.9;background:
+  repeating-linear-gradient(0deg,rgba(7,11,24,.0) 0 3px,rgba(7,11,24,.35) 3px 4px),
+  radial-gradient(ellipse 6% 60% at 18% 40%,rgba(255,207,90,.75),transparent 70%),
+  radial-gradient(ellipse 3% 80% at 34% 50%,rgba(79,227,161,.8),transparent 70%),
+  radial-gradient(ellipse 9% 40% at 52% 30%,rgba(90,168,255,.7),transparent 70%),
+  radial-gradient(ellipse 2% 90% at 63% 55%,rgba(255,127,200,.75),transparent 70%),
+  radial-gradient(ellipse 14% 30% at 80% 35%,rgba(185,140,255,.6),transparent 70%),
+  linear-gradient(180deg,#0b1430,#070b18)}
+.sign .dial{position:absolute;left:1.4rem;right:1.4rem;top:1rem;display:flex;justify-content:space-between;font:600 .7rem var(--f-mono);color:#9aa4bb;border-bottom:1px solid #3a4770;padding-bottom:.3rem}
+.sign h1{position:relative;color:#e8ecf5;font-weight:700;font-size:clamp(3.2rem,12vw,6.8rem);line-height:.9;margin:.1rem 0 0;letter-spacing:-.02em}
+.sign h1 span:first-child{font-size:.45em;letter-spacing:.02em;color:#9aa4bb}
+.sign h1 .file{color:#4fe3a1}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:10px;padding:1.4rem 1.4rem 1.2rem;color:#f2f0ea;overflow:hidden;
+  background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.05) 0 1px,transparent 1.5px) 0 0/7px 7px,radial-gradient(circle at 70% 60%,rgba(0,0,0,.25) 0 1px,transparent 1.5px) 0 0/9px 9px,#2c2f32;border:1px solid #3d4246}
+.sign h1{color:#f2f0ea;font-weight:800;font-size:clamp(3.4rem,13vw,7.4rem);line-height:.86;margin:.1rem 0 .5rem;text-transform:uppercase;letter-spacing:.01em}
+.sign h1 .file{color:#ff8a3d}
+.sign .marks{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.4rem}
+.sign .marks span{font-family:var(--f-hand);font-size:1.05rem;line-height:1;padding:.32rem .55rem .2rem;border-radius:3px;color:#1a1c1e;transform:rotate(var(--r,-2deg))}
+.sign .arrow{position:absolute;right:1.2rem;top:1rem;font-family:var(--f-hand);font-size:2.4rem;color:#f5c935;transform:rotate(8deg);line-height:1}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:1rem;letter-spacing:.02em;transform:none;clip-path:none;border-radius:4px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.4rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-grn)}.labels li:nth-child(2){--lc:var(--u-blu)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-pur)}.labels li:nth-child(5){--lc:var(--u-pnk)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.3rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-mono);font-weight:600;font-size:.32em;transform:none;clip-path:none;border-radius:3px;color:var(--sci,#1a1c1e);background:var(--sc,var(--tape));padding:.32em .5em .2em;vertical-align:.55em}
+.chip-n{color:var(--sci,#1a1c1e);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3,.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--tape);color:var(--tape-ink)}
+.seg button[aria-pressed="true"]{color:var(--tape-ink)}
+.btn{color:var(--tape-ink)}
+em:first-child{color:var(--muted)}
+.gl-list .cat{color:var(--ink-on)}
+/* lookup + decoder */
+.lk-tools{display:grid;gap:.7rem}
+.lk-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(16.5rem,1fr));gap:.55rem}
+.lk-list a{display:block;height:100%;background:var(--bg);border:1px solid var(--line);border-left:5px solid var(--lc,var(--tape));border-radius:6px;padding:.6rem .75rem;text-decoration:none;color:var(--ink)}
+.lk-list a:hover{border-color:var(--lc,var(--tape))}
+.lk-list .see{display:block;font-weight:600;font-size:1rem;line-height:1.3}
+.lk-list .is{display:block;font-size:.9rem;line-height:1.4;color:var(--muted);margin-top:.2rem}
+.lk-list .sec{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:.35rem}
+.dec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.55rem;margin-top:.9rem}
+.dec-item{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:.6rem;align-items:start;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem}
+.dec-sw{width:2.6rem;height:2.6rem;border-radius:5px;border:1px solid rgba(0,0,0,.25);display:grid;place-items:center;font-family:var(--f-hand);font-size:.95rem;color:#1a1c1e}
+.dec-item b{display:block;font-size:.98rem;line-height:1.25}
+.dec-item p{margin:.15rem 0 0;font-size:.86rem;line-height:1.38;color:var(--muted)}
+.dec-src{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);margin-top:.7rem;overflow-wrap:anywhere}
+.dec-src a{color:var(--muted)}
+.dg .t.wh{fill:#fff}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-wht{fill:var(--u-wht)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}.dg .w.wht{stroke:var(--u-wht)}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.dg .hand{font-family:var(--f-hand);font-size:15px}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+/* quiz, quick answers, trivia */
+.qz{border-bottom:1px solid var(--line);padding:.8rem 0}
+.qz:last-child{border-bottom:0}
+.qz-q{margin:0 0 .5rem;font-weight:600;font-size:1.02rem;line-height:1.4}
+.qz-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.4rem}
+.qz-o{font:inherit;font-size:.95rem;text-align:left;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.5rem .65rem;cursor:pointer;line-height:1.35}
+.qz-o:hover:not(:disabled){border-color:var(--tape)}
+.qz-o.right{border-color:var(--u-grn);box-shadow:inset 4px 0 0 var(--u-grn)}
+.qz-o.wrong{border-color:var(--u-red);box-shadow:inset 4px 0 0 var(--u-red)}
+.qz-o:disabled{cursor:default}
+.qz-why{margin:.55rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.45}
+.qz-why b{color:var(--ink)}
+.qz-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;flex-wrap:wrap}
+.qa{margin-top:2.6rem}
+.qa h2{font-size:1.6rem!important;margin:0 0 .4rem!important}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+
+/* spectrum ruler */
+.sp .sp-bar{cursor:pointer}
+.sp .sp-bar rect{opacity:.85}
+.sp .sp-bar:hover rect,.sp .sp-bar:focus rect,.sp .sp-bar.on rect{opacity:1;stroke:var(--ink);stroke-width:1.5}
+.sp .sp-bar:focus{outline:none}
+.sp-info{margin-top:.6rem;border-top:1px dashed var(--line);padding-top:.6rem;min-height:4.2rem}
+.sp-info b{font-size:1.02rem}
+.sp-info p{margin:.2rem 0 0;font-size:.92rem;color:var(--muted);line-height:1.45}
+.dg.sp{min-width:900px}
+
+/* ---------- wristband ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.path b,.card b,.tool h4{font-family:var(--f-display);font-weight:400;text-transform:uppercase;letter-spacing:.01em}
+article h2,article h1.sec-h1{font-size:clamp(2.6rem,8vw,4.4rem);line-height:.9}
+article h3{font-family:var(--f-body);font-weight:600}
+.sign.wbsign{position:relative;margin:.4rem 0 1.4rem;max-width:none;padding:0;background:none;border:0;box-shadow:none;min-height:0;display:block;overflow:visible}
+.wb{display:block;width:calc(100% + 2rem);margin:0 -1rem;height:auto;filter:drop-shadow(0 10px 18px rgba(22,19,28,.18))}
+.wb-band{fill:var(--band)} .wb-band2{fill:var(--band2)}
+.wb-th{stroke:var(--thread);stroke-width:.6;opacity:.35} .wb-th2{stroke:#000;stroke-width:.6;opacity:.12}
+.wb-stitch{stroke:var(--thread);stroke-width:2;stroke-dasharray:6 5;fill:none;opacity:.8}
+.wb-txt{font-family:var(--f-display);font-size:26px;letter-spacing:3px;fill:var(--thread)}
+.wb-dia{fill:none;stroke:var(--thread);stroke-width:1.6;opacity:.8}
+:root[data-theme="dark"] .wb{filter:drop-shadow(0 0 22px rgba(255,62,200,.45))}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .wb{filter:drop-shadow(0 0 22px rgba(255,62,200,.45))}}
+.sign.wbsign h1{color:var(--ink);font-size:clamp(5rem,22vw,13rem);line-height:.82;margin:.2rem 0 0;letter-spacing:-.005em;text-shadow:none}
+.sign.wbsign h1 .file{color:var(--ink)}
+.dek{font-size:clamp(1.2rem,2.8vw,1.5rem)}
+.labels li{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.02em;background:none;color:var(--ink);border:0;border-left:0;padding:0;box-shadow:none;transform:none;clip-path:none;text-transform:uppercase}
+.labels{gap:.4rem 1.2rem}
+.labels b{font-family:var(--f-display);font-size:1.6rem;font-weight:400;margin-right:.35rem;vertical-align:-.15em}
+/* passes */
+.path.pass{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:2.1rem .9rem .9rem;overflow:hidden}
+.path.pass .hole{position:absolute;top:.6rem;left:50%;width:34px;height:8px;margin-left:-17px;border-radius:6px;background:var(--bg);box-shadow:inset 0 1px 2px rgba(0,0,0,.25)}
+.path.pass .tier{position:absolute;top:0;right:0;font-family:var(--f-display);font-size:1.6rem;line-height:1;padding:.35rem .6rem .25rem;background:var(--band);color:var(--thread);border-bottom-left-radius:10px}
+.path.pass:nth-child(2) .tier{background:var(--u-pur);color:#fff}.path.pass:nth-child(3) .tier{background:var(--ink);color:var(--bg)}
+.path.pass:nth-child(4) .tier{background:var(--u-yel);color:var(--ink)}.path.pass:nth-child(5) .tier{background:var(--u-pnk);color:#fff}.path.pass:nth-child(6) .tier{background:var(--u-blu);color:#fff}
+.path.pass b{font-size:1.9rem;line-height:.95}
+/* lineup poster */
+.poster{margin:2rem 0 1rem;background:var(--ink);color:var(--bg);border-radius:6px;padding:1.6rem 1.2rem 1.2rem;text-align:center;position:relative;overflow:hidden}
+.poster::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 2px,transparent 2px 5px);pointer-events:none}
+.poster .ph{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin:0 0 .3rem}
+.poster .pt{font-family:var(--f-display);font-size:clamp(3.4rem,11vw,6.4rem);line-height:.85;margin:0 0 1rem;color:var(--band)}
+.poster .day{border-top:1px solid rgba(255,255,255,.18);padding:.9rem 0 .6rem}
+.poster .dn{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--band);margin-bottom:.4rem}
+.poster a{color:inherit;text-decoration:none;font-family:var(--f-display);text-transform:uppercase;line-height:1}
+.poster a:hover{color:var(--band)}
+.poster .t1 a{font-size:clamp(2.6rem,8vw,4.6rem);display:inline-block}
+.poster .t2{margin:.35rem 0}.poster .t2 a{font-size:clamp(1.5rem,4vw,2.3rem)}
+.poster .t3 a{font-size:clamp(1.1rem,2.6vw,1.5rem);opacity:.85}
+.poster .dot{opacity:.45;margin:0 .45rem;font-family:var(--f-display)}
+.poster .fine{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;opacity:.55;margin-top:.8rem;text-transform:uppercase}
+:root[data-theme="dark"] .poster{background:#000;box-shadow:0 0 0 1px var(--line),0 0 40px rgba(198,255,61,.08)}
+/* finder + calendar */
+.fd-tools{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.6rem;margin-bottom:.6rem}
+@media (max-width:640px){.fd-tools{grid-template-columns:1fr 1fr}.fd-tools .field:first-child{grid-column:1/-1}}
+.fd td:first-child b{font-family:var(--f-display);font-weight:400;font-size:1.25rem;text-transform:uppercase;letter-spacing:.01em}
+.fd td{font-size:.9rem;vertical-align:top}.fd td .s{font-size:.75rem;color:var(--muted)}
+.cal{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+@media (max-width:760px){.cal{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:420px){.cal{grid-template-columns:repeat(2,1fr)}}
+.cal .mo{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.5rem .55rem;min-width:0;position:relative}
+.cal .mo.hot{border-color:var(--band);box-shadow:inset 0 3px 0 var(--band)}
+.cal h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.6rem;text-transform:uppercase;line-height:1}
+.cal .n{position:absolute;top:.5rem;right:.55rem;font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
+.cal ul{list-style:none;margin:.35rem 0 0;padding:0;font-size:.8rem;line-height:1.35}
+.cal .cc{font-family:var(--f-mono);font-size:.62rem;color:var(--muted);margin-right:.3rem}
+.cal .more{color:var(--muted);font-style:italic}
+.chip-n{font-family:var(--f-display);font-size:1rem}
+.card b{font-size:1.7rem;line-height:.95}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-wristbands">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">The Wristband</a> / Wristbands, cashless and the gate</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">The Wristband</a></h2><a href="/finder/"><span class="n">01</span>The festival finder</a><a href="/history/"><span class="n">02</span>A short history of the music festival</a><a href="/owners/"><span class="n">03</span>Who owns the festivals</a><a href="/money/"><span class="n">04</span>Where the money goes</a><a href="/lineup/"><span class="n">05</span>How a lineup gets made</a><a href="/selling/"><span class="n">06</span>How festivals sell out</a><a href="/build/"><span class="n">07</span>Building a city in a field</a><a href="/safety/"><span class="n">08</span>Crowds, heat and keeping people safe</a><a href="/wristbands/" class=on aria-current=page><span class="n">09</span>Wristbands, cashless and the gate</a><a href="/camping/"><span class="n">10</span>Camping, getting there and getting home</a><a href="/impact/"><span class="n">11</span>Waste, carbon and the town next door</a><a href="/season/"><span class="n">12</span>The global festival season</a><a href="/new-england/"><span class="n">13</span>New England: from Newport to Boston Calling</a><a href="/quiz/"><span class="n">14</span>Test yourself</a><a href="/glossary/"><span class="n">15</span>The glossary</a><a href="/next/"><span class="n">16</span>Where to go next</a><a href="/open/"><span class="n">17</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">18</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 09 of 18 · about 11 min read · updated November 2026</p><section class="sec" style="--sc:var(--u-org);--sci:var(--ink-on)"><h1 class="sec-h1" id="sec-wristbands" style="--sc:var(--u-org);--sci:var(--ink-on)"><span class="tape">09</span>Wristbands, cashless and the gate</h1>
+<p class="short"><strong>The short version:</strong> The band on your wrist is mostly a number. The chip inside carries a unique ID that the festival looks up in its own database every time you tap or walk through a gate, which is why activating it online matters and why a cut band is a dead band. Many festivals now run the bar, the food trucks and the merch tent off that same chip, and the leftover money comes back only if you ask for it online, inside a window, usually minus a small fee. The gate is where all of this meets a bag check, a scanner and, if you are unlucky, a counterfeit.</p><aside class="callout" style="--sc:var(--u-org)"><b class="k">Did you know?</b>Visitors to Sziget, VOLT and Balaton Sound in Hungary left more than HUF 104 million unclaimed on their festival cards in 2018.<sup id="fnref-tv-185"><a class="footnote-ref" href="#fn-185">185</a></sup></aside>
+<h3 id="what-is-actually-inside-a-festival-wristband">What is actually inside a festival wristband?</h3>
+<p>A small radio chip and an antenna, and the chip's main job is to say one number. Intellitix, a festival RFID vendor, says the chip holds a <strong>unique identifier (UID)</strong> and "does not hold any personal information"; the scanner reads the UID and checks it against a secure database where your ticket, your name and any payment details live.<sup id="fnref-172"><a class="footnote-ref" href="#fn-172">172</a></sup> <strong>RFID</strong> (radio frequency identification) is the umbrella term: no battery, powered by the reader's own radio field when it comes close.</p>
+<p>Two radio families show up at festivals, and they do different jobs:</p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Frequency</th>
+<th>Typical read range</th>
+<th>What festivals use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HF / NFC</strong> (near field communication)</td>
+<td>13.56 MHz</td>
+<td>about 4 cm (1.5 in)</td>
+<td>Deliberate taps: paying at a bar, topping up, VIP lanes</td>
+</tr>
+<tr>
+<td><strong>UHF</strong> (ultra high frequency)</td>
+<td>UHF band</td>
+<td>about 1-6 m (3-20 ft) in standard setups</td>
+<td>Gates: several bands read at once, timestamped, hands-free</td>
+</tr>
+<tr>
+<td><strong>Dual-frequency</strong></td>
+<td>Both</td>
+<td>Both</td>
+<td>One band that does gates and payments</td>
+</tr>
+</tbody>
+</table></div>
+<p>Figures from Wristband.com, a wristband seller (May 2026 guide).<sup id="fnref-173"><a class="footnote-ref" href="#fn-173">173</a></sup> The short NFC range is a feature: you do not want a bar terminal charging the person behind you. The long UHF range is also a feature: a gate can read a crowd walking through without anyone stopping to tap.</p>
+<p>Ticket Fairy, a ticketing vendor, describes the reads as encrypted challenge-response exchanges rather than a plain number being shouted into the air, and says readers and payment terminals can work offline, caching transactions until the network comes back.<sup id="fnref-174"><a class="footnote-ref" href="#fn-174">174</a></sup> That offline mode matters more than it sounds - see the phone section below.</p>
+<h3 id="do-festival-wristbands-track-your-location">Do festival wristbands track your location?</h3>
+<p>According to the vendors and festivals that run them, no. Intellitix says bands are scanned only at marked access points and do not communicate location after entry or exit.<sup id="fnref2-172"><a class="footnote-ref" href="#fn-172">172</a></sup> splash! Festival in Germany says flatly that its chips have no GPS.<sup id="fnref-175"><a class="footnote-ref" href="#fn-175">175</a></sup> What a band does leave is a trail of scans: every gate you passed and, on a cashless site, every purchase. splash! is candid about this, saying its transactions are recorded and the system is therefore "not fully anonymous."<sup id="fnref2-175"><a class="footnote-ref" href="#fn-175">175</a></sup> So the honest version: a wristband knows where you were each time you tapped it, not where you are.</p>
+<h3 id="how-do-i-activate-my-festival-wristband-and-why-bother">How do I activate my festival wristband, and why bother?</h3>
+<p><strong>Activation</strong> means registering the band's ID online so the festival's database ties it to you. Hinterland in Iowa, in festival information it says is from its 2026 edition, asks attendees to activate before arriving, link a payment card if they want to pay cashless, and add an emergency contact.<sup id="fnref-176"><a class="footnote-ref" href="#fn-176">176</a></sup></p>
+<p>The practical payoff is the lost band. Because the money and the ticket live in the database rather than on the chip, a registered band can be frozen online, according to Intellitix, and splash! says a registered chip can be blocked and its balance moved to a new one.<sup id="fnref3-172"><a class="footnote-ref" href="#fn-172">172</a></sup><sup id="fnref3-175"><a class="footnote-ref" href="#fn-175">175</a></sup> An unregistered band that falls off in a field is, to the system, a stranger's band with your money on it.</p>
+<p>Activation also sets up re-entry rules. Hinterland requires an exit scan for same-day re-entry.<sup id="fnref2-176"><a class="footnote-ref" href="#fn-176">176</a></sup> Ticket Fairy describes the general logic: a gate marks a band "used" on the way in and will not let it in again until it has been scanned out.<sup id="fnref2-174"><a class="footnote-ref" href="#fn-174">174</a></sup> Wristband.com calls this <strong>anti-passback</strong> - the gate flags a repeat entry with no exit between.<sup id="fnref2-173"><a class="footnote-ref" href="#fn-173">173</a></sup> It is the reason you cannot walk in, hand your band through the fence, and have a friend walk in on it.</p>
+<h3 id="why-are-some-festival-wristbands-impossible-to-take-off">Why are some festival wristbands impossible to take off?</h3>
+<p>Because the lock only goes one way. SeatGeek's explainer says fabric bands have a locking mechanism that cannot be removed without damage, and most use a <strong>one-way lock</strong>: once fastened, the band cannot be loosened.<sup id="fnref-177"><a class="footnote-ref" href="#fn-177">177</a></sup> Pull it tighter and that is where it stays. SeatGeek adds the warning every first-timer learns the hard way: tighten it too far and you may have to cut it, which can invalidate it.<sup id="fnref2-177"><a class="footnote-ref" href="#fn-177">177</a></sup></p>
+<p>Festivals write this into the terms. Hinterland's wristband policy says the band must be worn so it "cannot be slipped on or off," that removing, stretching or tampering "will void entry," and that the band is a "revocable license" rather than something you own outright.<sup id="fnref3-176"><a class="footnote-ref" href="#fn-176">176</a></sup> Intellitix says a broken-off band cannot be reattached.<sup id="fnref4-172"><a class="footnote-ref" href="#fn-172">172</a></sup></p>
+<p>The design goal is one band, one wrist, for the whole weekend. A band that could slide off could be sold on the walk home on Friday night or passed back over a fence. The chip handles the digital side of that problem; the lock handles the physical side.</p>
+<p>Inside, one common design is a barrel lock with prongs. ID&amp;C, a UK wristband supplier, says its fabric barrel lock uses "a one-way sliding mechanism with internal prongs that pierce the fabric," so that once fastened the band "can't be removed without cutting."<sup id="fnref-178"><a class="footnote-ref" href="#fn-178">178</a></sup></p>
+<h3 id="what-happens-if-i-cut-my-festival-wristband">What happens if I cut my festival wristband?</h3>
+<p>You will probably need a new one, and it may cost you. Intellitix says damaged bands are replaced at the box office with photo ID, and a fee may apply.<sup id="fnref5-172"><a class="footnote-ref" href="#fn-172">172</a></sup> Hinterland's policy is specific: one replacement only, $25, and only for the original purchaser showing photo ID.<sup id="fnref4-176"><a class="footnote-ref" href="#fn-176">176</a></sup> Removing the band yourself counts as tampering under that policy and voids entry.<sup id="fnref5-176"><a class="footnote-ref" href="#fn-176">176</a></sup> If a band is too tight to bear, go to the box office or the festival's help desk before reaching for scissors.</p>
+<h3 id="how-to-spot-a-fake-festival-wristband-and-who-gets-caught-selling-them">How to spot a fake festival wristband (and who gets caught selling them)</h3>
+<p>The fakes are real, and so are the arrests. The Las Vegas Review-Journal reported two men arrested over a counterfeit wristband scheme at Electric Daisy Carnival in Las Vegas, with bands ordered from an out-of-state supplier and an estimated value of $1 million; charges included obtaining money under false pretenses, attempted forgery and conspiracy.<sup id="fnref-179"><a class="footnote-ref" href="#fn-179">179</a></sup> In Miami, WSVN 7News reported in March 2025 that a man was arrested for allegedly selling two fake Ultra Music Festival wristbands for $1,200 cash, charged with an organized scheme to defraud.<sup id="fnref-180"><a class="footnote-ref" href="#fn-180">180</a></sup></p>
+<p>The EDC arrests date from the festival's June 2011 edition: the Las Vegas Sun reported them on June 25, 2011, saying the event organizer had alerted police to about $1 million in fake "all-access" wristbands.<sup id="fnref-181"><a class="footnote-ref" href="#fn-181">181</a></sup></p>
+<p>The countermeasure is the chip. A printed copy of a band can look perfect and still fail at the gate, because the scanner is checking for a valid ID in the database, not for the right shade of fabric. Ticket Fairy claims Coachella "virtually eliminated counterfeit tickets at its festival gates" with RFID; that is a vendor claim and not independently verified.<sup id="fnref3-174"><a class="footnote-ref" href="#fn-174">174</a></sup> Festivals back the tech with policy: Hinterland says counterfeit or duplicated bands "will be confiscated by security" and tickets from unauthorized sources will not get in.<sup id="fnref6-176"><a class="footnote-ref" href="#fn-176">176</a></sup></p>
+<p>For the buyer, the takeaway is dull and reliable: buy from the festival or its official resale channel. Nobody outside a gate can show you that a band's chip is live.</p>
+<h3 id="how-does-cashless-payment-work-at-a-festival">How does cashless payment work at a festival?</h3>
+<p>There are two main models, and they handle your money differently.</p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>How it works</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Linked card</strong></td>
+<td>You attach a real bank card to the band at activation; each tap charges the card</td>
+<td>Hinterland, Iowa<sup id="fnref9-176"><a class="footnote-ref" href="#fn-176">176</a></sup></td>
+</tr>
+<tr>
+<td><strong>Closed-loop</strong></td>
+<td>You load money onto a festival-only balance or currency; nothing else is accepted</td>
+<td>splash!, Germany (2025)<sup id="fnref7-175"><a class="footnote-ref" href="#fn-175">175</a></sup>; Dour, Belgium (2026)<sup id="fnref5-182"><a class="footnote-ref" href="#fn-182">182</a></sup></td>
+</tr>
+</tbody>
+</table></div>
+<p>At splash! in 2025, the ticket is exchanged on site for an RFID chip that is the only way to pay; the system is run by Weezevent.<sup id="fnref4-175"><a class="footnote-ref" href="#fn-175">175</a></sup> Dour goes a step further with its own currency, the <strong>Douro</strong>, priced at €1.75 each, with a cap of €425 on a chip.<sup id="fnref-182"><a class="footnote-ref" href="#fn-182">182</a></sup> Belgium's Tomorrowland also uses RFID wristbands; Ticket Fairy says they once had a button that two people could press at the same time to register as friends.<sup id="fnref4-174"><a class="footnote-ref" href="#fn-174">174</a></sup></p>
+<p>A <strong>top-up</strong> is adding money to the balance. At splash! 2025, topping up online before the festival is free; topping up with cash on site costs €1.50 per transaction, and the balance is capped at €250.<sup id="fnref5-175"><a class="footnote-ref" href="#fn-175">175</a></sup></p>
+<p>Why festivals like it: speed and spend, according to vendors. Ticket Fairy claims RFID payments take under 2 seconds against 15-30 seconds for cards (citing payments vendor Billfold), and reports a roughly 24% rise in average spend per attendee at Standon Calling in the UK after it went cashless.<sup id="fnref5-174"><a class="footnote-ref" href="#fn-174">174</a></sup> Both are vendor claims, not independently verified, and no independent study of the spend effect turned up in our research.</p>
+<p>The nearest non-vendor source found is thin. A 2019 blog post from the University of St. Gallen's Executive School in Switzerland says sales at Open Air St. Gallen rose after it went cashless in 2013 and that a visitor spends an average of 126 francs, but gives no before-and-after figure.<sup id="fnref-183"><a class="footnote-ref" href="#fn-183">183</a></sup></p>
+<div class="diagram wide"><div class="dhead">Diagram 4 · Inside a cashless wristband</div><div class="dscroll"><svg class="dg" viewBox="0 0 780 194" role="img" aria-label="A chip wristband carries an ID. Gate readers check it, bar readers debit a balance held in the festival&#x27;s system, which you top up by card or app and can usually get refunded after the event."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0 0 L10 5 L0 10z"/></marker></defs><text class="s cap" x="8" y="20" text-anchor="start">What happens when you tap a chip wristband (typical cashless setup)</text><rect class="bx org" x="10" y="50" width="140" height="60" rx="6"/><text class="t" x="80.0" y="77.0" text-anchor="middle">Wristband</text><text class="s xs" x="80.0" y="93.0" text-anchor="middle">chip with an ID</text><rect class="bx blu" x="210" y="20" width="160" height="52" rx="6"/><text class="t" x="290.0" y="43.0" text-anchor="middle">Gate reader</text><text class="s xs" x="290.0" y="59.0" text-anchor="middle">checks ID is valid</text><rect class="bx blu" x="210" y="96" width="160" height="52" rx="6"/><text class="t" x="290.0" y="119.0" text-anchor="middle">Bar reader</text><text class="s xs" x="290.0" y="135.0" text-anchor="middle">debits the balance</text><rect class="bx grn" x="430" y="58" width="150" height="56" rx="6"/><text class="t" x="505.0" y="83.0" text-anchor="middle">Festival system</text><text class="s xs" x="505.0" y="99.0" text-anchor="middle">accounts, top-ups</text><rect class="bx " x="640" y="20" width="130" height="52" rx="6"/><text class="t" x="705.0" y="43.0" text-anchor="middle">Top up</text><text class="s xs" x="705.0" y="59.0" text-anchor="middle">card or app</text><rect class="bx pnk" x="640" y="96" width="130" height="52" rx="6"/><text class="t" x="705.0" y="119.0" text-anchor="middle">Refund</text><text class="s xs" x="705.0" y="135.0" text-anchor="middle">after the event</text><path class="w" d="M150 70 L210 46" marker-end="url(#ah)"/><path class="w" d="M150 90 L210 122" marker-end="url(#ah)"/><path class="w" d="M370 46 L430 76" marker-end="url(#ah)"/><path class="w" d="M370 122 L430 98" marker-end="url(#ah)"/><path class="w" d="M640 46 L580 76" marker-end="url(#ah)"/><path class="w" d="M580 98 L640 122" marker-end="url(#ah)"/><text class="s xs" x="8" y="184" text-anchor="start">The band usually stores an ID, not money; the balance lives in the festival&#x27;s system. Refund windows and fees vary by festival.</text></svg></div></div>
+
+<h3 id="how-do-i-get-a-refund-of-my-cashless-festival-balance">How do I get a refund of my cashless festival balance?</h3>
+<p>Online, after the festival, inside a window, usually minus a fee. Here is what three European festivals published:</p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Festival</th>
+<th>Edition</th>
+<th>Window</th>
+<th>Fee</th>
+<th>Other rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dour (Belgium)</td>
+<td>2026</td>
+<td>21 July - 21 August 2026</td>
+<td>2 Douros (€3.50)</td>
+<td>Online only, "no refunds are given on site"; Douros not valid at the next edition<sup id="fnref6-182"><a class="footnote-ref" href="#fn-182">182</a></sup></td>
+</tr>
+<tr>
+<td>Boombastic (Spain)</td>
+<td>2026</td>
+<td>27 July - 14 August 2026</td>
+<td>€2.50</td>
+<td>Transfers within 20 business days after the window<sup id="fnref2-184"><a class="footnote-ref" href="#fn-184">184</a></sup></td>
+</tr>
+<tr>
+<td>splash! (Germany)</td>
+<td>2025</td>
+<td>No deadline stated</td>
+<td>€0.50</td>
+<td>Minimum balance €1; payout in about 2 weeks<sup id="fnref8-175"><a class="footnote-ref" href="#fn-175">175</a></sup></td>
+</tr>
+</tbody>
+</table></div>
+<p>All figures are official, from each festival's own page. Dour's page dates may carry over from a previous edition, so check the current one.<sup id="fnref2-182"><a class="footnote-ref" href="#fn-182">182</a></sup> Across these samples the fee runs from €0.50 to €3.50.</p>
+<h3 id="what-happens-to-money-left-on-a-festival-wristband">What happens to money left on a festival wristband?</h3>
+<p>If you miss the window, it is usually gone. Dour states that "No request will be processed after Friday 21 August 2026" and that remaining credit is lost.<sup id="fnref3-182"><a class="footnote-ref" href="#fn-182">182</a></sup> With a hard deadline, a small fee and a balance of a few euros, many people may not bother.</p>
+<p>Money that is paid in and never claimed is sometimes called <strong>breakage</strong>. Two reported figures put a size on it. Portfolio.hu reported in 2019 that visitors to Sziget, VOLT and Balaton Sound in Hungary left more than HUF 104 million on festival cards in 2018, citing the organizer's company report.<sup id="fnref-185"><a class="footnote-ref" href="#fn-185">185</a></sup> A University of St. Gallen blog post, citing NZZ am Sonntag, puts unreclaimed balances at 1 to 1.5% of festival credit within two years (2019, reported).<sup id="fnref2-183"><a class="footnote-ref" href="#fn-183">183</a></sup></p>
+<p>Two habits help: top up in small amounts, and put the refund deadline in your calendar on the drive home. On the linked-card model there is no balance to forget, because each tap charges your card directly.<sup id="fnref7-176"><a class="footnote-ref" href="#fn-176">176</a></sup></p>
+<h3 id="what-happens-at-the-festival-gate">What happens at the festival gate?</h3>
+<p>Two checks, usually in this order: people and bags, then the band. The band check is the UHF read or NFC tap described above, with anti-passback logic deciding whether you are entering for the first time, re-entering after a proper exit scan, or trying something.<sup id="fnref3-173"><a class="footnote-ref" href="#fn-173">173</a></sup><sup id="fnref6-174"><a class="footnote-ref" href="#fn-174">174</a></sup></p>
+<p>The bag check is where most queues form, and the rules are set festival by festival and year by year. US festivals have converged on small bags, sealed or empty water bottles, and bans on things that block views or could be a weapon. Boston Calling's 2023 rules are a fair sample, reported by WBUR:<sup id="fnref2-158"><a class="footnote-ref" href="#fn-158">158</a></sup></p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Allowed (2023)</th>
+<th>Not allowed (2023)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bags smaller than 6 x 9 inches (about 15 x 23 cm)</td>
+<td>Sleeping bags</td>
+</tr>
+<tr>
+<td>Factory-sealed snacks</td>
+<td>Umbrellas</td>
+</tr>
+<tr>
+<td>Hats, sunglasses</td>
+<td>Chairs</td>
+</tr>
+<tr>
+<td>Non-aerosol sunscreen</td>
+<td>Strollers</td>
+</tr>
+<tr>
+<td>One factory-sealed plastic water bottle, or an empty reusable bottle, or an empty hydration pack</td>
+<td>Instruments, bikes</td>
+</tr>
+</tbody>
+</table></div>
+<p>Read the current FAQ for your festival the week before; sizes and lists change.</p>
+<p>UK lists focus more on what is banned than on bag size; Glastonbury's 2025 list, and why bag rules got stricter, are in <a href="/safety/">Crowds, heat and keeping people safe</a>.<sup id="fnref2-161"><a class="footnote-ref" href="#fn-161">161</a></sup></p>
+<h3 id="why-is-there-no-phone-signal-at-festivals">Why is there no phone signal at festivals?</h3>
+<p>Because a field of 100,000 people is a small city that appears for three days, on land built for a few dozen. Carriers answer with <strong>COWs</strong> (cells on wheels) - portable cell towers on trucks or trailers - and specialist antennas.</p>
+<p>The data shows how hard the load climbs. AT&amp;T reported 29.2 TB of cellular data over Coachella's two weekends in 2016 (18.6 TB the first, 10.6 TB the second), up from about 24 TB in 2015; its kit included COWs, in use by 2015, plus "cheese wheel" antennas and a larger "drum set" antenna, and all of its traffic was cellular, no Wi-Fi. AT&amp;T also claimed Coachella data grew 20 times between 2011 and 2015.<sup id="fnref-186"><a class="footnote-ref" href="#fn-186">186</a></sup></p>
+<p>Verizon reported 10.8 TB over two days at Sea.Hear.Now in Asbury Park, New Jersey, in 2022, up 23% on 2021, with two COWs on site and 5G use up 166%, from 895 GB to 2.4 TB.<sup id="fnref-187"><a class="footnote-ref" href="#fn-187">187</a></sup></p>
+<p>Glastonbury is bigger again. Ticket Fairy puts 2024 traffic at about 225 TB (citing Subtonomy) and, citing analysts CCS Insight, lists temporary masts or sites from all four UK networks: Vodafone 10, EE 9, Virgin Media O2 8, Three 6. It describes COW masts up to about 80 ft (24 m) and rental from a few thousand to tens of thousands of dollars a week.<sup id="fnref-188"><a class="footnote-ref" href="#fn-188">188</a></sup> That is a secondary vendor source; we could not load the CCS Insight original.</p>
+<p>The same source advises organizers to separate staff and production Wi-Fi from public Wi-Fi, to prioritize emergency, staff and payment traffic, and to give payment terminals an offline fallback.<sup id="fnref2-188"><a class="footnote-ref" href="#fn-188">188</a></sup> That last point is why cashless systems cache transactions: the bar keeps serving when the network does not.<sup id="fnref7-174"><a class="footnote-ref" href="#fn-174">174</a></sup> For the radio side of how a tower handles a crowd, see https://airwaves.cold.fyi/cellular/.</p>
+<h3 id="in-boston">In Boston</h3>
+<p>Boston Calling went cashless in 2023, with wristbands serving as both ticket and payment, WBUR reported that year.<sup id="fnref3-158"><a class="footnote-ref" href="#fn-158">158</a></sup> The bag and bottle rules in the gate table above come from the same 2023 guide; later editions may differ, so check the festival's current FAQ.<sup id="fnref4-158"><a class="footnote-ref" href="#fn-158">158</a></sup> The festival's history and its 2027 plans are in <a href="/new-england/">New England</a>.</p>
+<h3 id="elsewhere-in-the-world">Elsewhere in the world</h3>
+<p>Europe leans toward closed-loop systems in which the chip is the only wallet on site: splash! in Germany and Dour in Belgium accept neither cash nor card at the bar, and both publish refund rules with fees and, at Dour, a hard deadline.<sup id="fnref6-175"><a class="footnote-ref" href="#fn-175">175</a></sup><sup id="fnref4-182"><a class="footnote-ref" href="#fn-182">182</a></sup> Spain's Boombastic runs the same pattern with a 2026 refund window and a €2.50 fee.<sup id="fnref-184"><a class="footnote-ref" href="#fn-184">184</a></sup> Many US festivals instead link a real card at activation, as Hinterland does, which avoids a stored balance altogether.<sup id="fnref8-176"><a class="footnote-ref" href="#fn-176">176</a></sup> Tomorrowland in Belgium also uses RFID wristbands (vendor-reported).<sup id="fnref8-174"><a class="footnote-ref" href="#fn-174">174</a></sup></p>
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=The%20Wristband%20correction%3A%20Wristbands%2C%20cashless%20and%20the%20gate">Report an error in this section</a></p></section><section class="sec faq qa"><h2>Quick answers</h2><details><summary>How do festival RFID wristbands work?</summary><p>The chip in the band carries a unique ID number that readers look up in the festival&#x27;s database at gates and bars. NFC chips read at about 4 cm for payments, and UHF chips read at about 1-6 m for fast gate entry, according to vendor guides.</p></details><details><summary>Do festival wristbands track your location?</summary><p>Vendors and festivals say no: bands are read only at scanners, and splash! Festival says its chips have no GPS. They do leave a record of each gate scan and, on cashless sites, each purchase.</p></details><details><summary>Can you take a festival wristband off and put it back on?</summary><p>No. Most fabric bands use a one-way lock that tightens but cannot loosen, and festivals such as Hinterland (2026) say removing or tampering with a band voids entry.</p></details><details><summary>What happens if I cut my festival wristband?</summary><p>It is usually void, and you need a replacement at the box office with photo ID. Hinterland&#x27;s 2026 policy allows one replacement for $25, for the original purchaser only.</p></details><details><summary>How do I get a refund of my cashless festival balance?</summary><p>Request it online after the festival, inside the published window. Fees in 2025-2026 examples ran from 0.50 euros at splash! to 3.50 euros at Dour, and Dour says unclaimed credit after its deadline is lost.</p></details></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/safety/"><span>Previous · 08</span>Crowds, heat and keeping people safe</a><a class="next" href="/camping/"><span>Next · 10</span>Camping, getting there and getting home</a></nav><section class="refs" id="refs"><h2 style="font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:2rem;margin:0 0 .4rem">Sources for this section</h2><p style="font-size:.9rem;color:var(--muted);margin:0 0 1rem">19 of the guide's 311 sources. Numbers match the <a href="/all/#refs">full reference list</a>.</p><div class="footnote"><ol><li id="fn-158" value="158">
+<p>WBUR: What you need to know - 2023 Boston Calling - <a href="https://www.wbur.org/news/2023/05/26/what-you-need-to-know-2023-boston-calling" rel="noopener" target="_blank">wbur.org</a>&#160;<a class="footnote-backref" href="#fnref-158" title="Jump back to footnote 158 in the text">↩</a><a class="footnote-backref" href="#fnref2-158" title="Jump back to footnote 158 in the text">↩</a><a class="footnote-backref" href="#fnref3-158" title="Jump back to footnote 158 in the text">↩</a><a class="footnote-backref" href="#fnref4-158" title="Jump back to footnote 158 in the text">↩</a><a class="footnote-backref" href="#fnref5-158" title="Jump back to footnote 158 in the text">↩</a><a class="footnote-backref" href="#fnref6-158" title="Jump back to footnote 158 in the text">↩</a></p>
+</li><li id="fn-161" value="161">
+<p>Radio X: What to pack for Glastonbury 2025 - and what are the banned items? - <a href="https://www.radiox.co.uk/festivals/glastonbury/what-to-pack-banned-items-2025/" rel="noopener" target="_blank">radiox.co.uk</a>&#160;<a class="footnote-backref" href="#fnref-161" title="Jump back to footnote 161 in the text">↩</a><a class="footnote-backref" href="#fnref2-161" title="Jump back to footnote 161 in the text">↩</a></p>
+</li><li id="fn-172" value="172">
+<p>Intellitix: Everything you need to know about RFIDs - <a href="https://intellitix.com/hub/everything-you-need-to-know-about-rfids-transforming-the-festival-experience" rel="noopener" target="_blank">intellitix.com</a>&#160;<a class="footnote-backref" href="#fnref-172" title="Jump back to footnote 172 in the text">↩</a><a class="footnote-backref" href="#fnref2-172" title="Jump back to footnote 172 in the text">↩</a><a class="footnote-backref" href="#fnref3-172" title="Jump back to footnote 172 in the text">↩</a><a class="footnote-backref" href="#fnref4-172" title="Jump back to footnote 172 in the text">↩</a><a class="footnote-backref" href="#fnref5-172" title="Jump back to footnote 172 in the text">↩</a></p>
+</li><li id="fn-173" value="173">
+<p>Wristband.com: NFC vs RFID wristbands technology guide - <a href="https://www.wristband.com/blogs/news/nfc-vs-rfid-wristbands-technology-guide" rel="noopener" target="_blank">wristband.com</a>&#160;<a class="footnote-backref" href="#fnref-173" title="Jump back to footnote 173 in the text">↩</a><a class="footnote-backref" href="#fnref2-173" title="Jump back to footnote 173 in the text">↩</a><a class="footnote-backref" href="#fnref3-173" title="Jump back to footnote 173 in the text">↩</a></p>
+</li><li id="fn-174" value="174">
+<p>Ticket Fairy: RFID Event Technology - The Complete 2025 Guide - <a href="https://www.ticketfairy.com/blog/rfid-technology-for-event-ticketing-in-2025-the-complete-guide.md" rel="noopener" target="_blank">ticketfairy.com</a>&#160;<a class="footnote-backref" href="#fnref-174" title="Jump back to footnote 174 in the text">↩</a><a class="footnote-backref" href="#fnref2-174" title="Jump back to footnote 174 in the text">↩</a><a class="footnote-backref" href="#fnref3-174" title="Jump back to footnote 174 in the text">↩</a><a class="footnote-backref" href="#fnref4-174" title="Jump back to footnote 174 in the text">↩</a><a class="footnote-backref" href="#fnref5-174" title="Jump back to footnote 174 in the text">↩</a><a class="footnote-backref" href="#fnref6-174" title="Jump back to footnote 174 in the text">↩</a><a class="footnote-backref" href="#fnref7-174" title="Jump back to footnote 174 in the text">↩</a><a class="footnote-backref" href="#fnref8-174" title="Jump back to footnote 174 in the text">↩</a></p>
+</li><li id="fn-175" value="175">
+<p>splash! Festival: FAQ Cashless 2025 - <a href="https://splash-festival.de/en/info/faq-cashless-2025" rel="noopener" target="_blank">splash-festival.de</a>&#160;<a class="footnote-backref" href="#fnref-175" title="Jump back to footnote 175 in the text">↩</a><a class="footnote-backref" href="#fnref2-175" title="Jump back to footnote 175 in the text">↩</a><a class="footnote-backref" href="#fnref3-175" title="Jump back to footnote 175 in the text">↩</a><a class="footnote-backref" href="#fnref4-175" title="Jump back to footnote 175 in the text">↩</a><a class="footnote-backref" href="#fnref5-175" title="Jump back to footnote 175 in the text">↩</a><a class="footnote-backref" href="#fnref6-175" title="Jump back to footnote 175 in the text">↩</a><a class="footnote-backref" href="#fnref7-175" title="Jump back to footnote 175 in the text">↩</a><a class="footnote-backref" href="#fnref8-175" title="Jump back to footnote 175 in the text">↩</a></p>
+</li><li id="fn-176" value="176">
+<p>Hinterland: Wristband Policy - <a href="https://hinterlandiowa.com/info/wristband-policy" rel="noopener" target="_blank">hinterlandiowa.com</a>&#160;<a class="footnote-backref" href="#fnref-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref2-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref3-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref4-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref5-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref6-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref7-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref8-176" title="Jump back to footnote 176 in the text">↩</a><a class="footnote-backref" href="#fnref9-176" title="Jump back to footnote 176 in the text">↩</a></p>
+</li><li id="fn-177" value="177">
+<p>SeatGeek: Festival wristbands explained - <a href="https://seatgeek.com/blog/festival-wristbands-explained-how-they-work-and-when-they-arrive" rel="noopener" target="_blank">seatgeek.com</a>&#160;<a class="footnote-backref" href="#fnref-177" title="Jump back to footnote 177 in the text">↩</a><a class="footnote-backref" href="#fnref2-177" title="Jump back to footnote 177 in the text">↩</a></p>
+</li><li id="fn-178" value="178">
+<p>ID&amp;C: Fabric wristbands - barrel lock - <a href="https://www.idcband.com/fabric-barrel-lock" rel="noopener" target="_blank">idcband.com</a>&#160;<a class="footnote-backref" href="#fnref-178" title="Jump back to footnote 178 in the text">↩</a></p>
+</li><li id="fn-179" value="179">
+<p>Las Vegas Review-Journal: Two men arrested in EDC counterfeit wristband scheme - <a href="https://www.reviewjournal.com/news/two-men-arrested-in-edc-counterfeit-wristband-scheme" rel="noopener" target="_blank">reviewjournal.com</a>&#160;<a class="footnote-backref" href="#fnref-179" title="Jump back to footnote 179 in the text">↩</a></p>
+</li><li id="fn-180" value="180">
+<p>WSVN 7News: Man arrested for allegedly selling fake Ultra Music Festival wristbands - <a href="https://wsvn.com/news/local/miami-dade/man-arrested-for-allegedly-selling-fake-ultra-music-festival-wristbands/" rel="noopener" target="_blank">wsvn.com</a>&#160;<a class="footnote-backref" href="#fnref-180" title="Jump back to footnote 180 in the text">↩</a></p>
+</li><li id="fn-181" value="181">
+<p>Las Vegas Sun: Counterfeit wristband operation found at EDC (June 25, 2011) - <a href="https://m.lasvegassun.com/news/2011/jun/25/counterfeit-wristband-operation-found-edc/" rel="noopener" target="_blank">m.lasvegassun.com</a>&#160;<a class="footnote-backref" href="#fnref-181" title="Jump back to footnote 181 in the text">↩</a></p>
+</li><li id="fn-182" value="182">
+<p>Dour Festival: Cashless - <a href="https://dourfestival.eu/en/cashless" rel="noopener" target="_blank">dourfestival.eu</a>&#160;<a class="footnote-backref" href="#fnref-182" title="Jump back to footnote 182 in the text">↩</a><a class="footnote-backref" href="#fnref2-182" title="Jump back to footnote 182 in the text">↩</a><a class="footnote-backref" href="#fnref3-182" title="Jump back to footnote 182 in the text">↩</a><a class="footnote-backref" href="#fnref4-182" title="Jump back to footnote 182 in the text">↩</a><a class="footnote-backref" href="#fnref5-182" title="Jump back to footnote 182 in the text">↩</a><a class="footnote-backref" href="#fnref6-182" title="Jump back to footnote 182 in the text">↩</a></p>
+</li><li id="fn-183" value="183">
+<p>University of St. Gallen Executive School: Cashless payment systems - Open Air visitors spend more money (2019) - <a href="https://lam.unisg.ch/blog/en?p=1186" rel="noopener" target="_blank">lam.unisg.ch</a>&#160;<a class="footnote-backref" href="#fnref-183" title="Jump back to footnote 183 in the text">↩</a><a class="footnote-backref" href="#fnref2-183" title="Jump back to footnote 183 in the text">↩</a></p>
+</li><li id="fn-184" value="184">
+<p>Boombastic: Cashless System - <a href="https://www.boombasticfestival.com/en/cashless" rel="noopener" target="_blank">boombasticfestival.com</a>&#160;<a class="footnote-backref" href="#fnref-184" title="Jump back to footnote 184 in the text">↩</a><a class="footnote-backref" href="#fnref2-184" title="Jump back to footnote 184 in the text">↩</a></p>
+</li><li id="fn-185" value="185">
+<p>Portfolio.hu: Visitors leave HUF 100 mn on festival cards (2019) - <a href="https://www.portfolio.hu/en/companies/visitors-leave-huf-100-mn-on-festival-cards.40055.html" rel="noopener" target="_blank">portfolio.hu</a>&#160;<a class="footnote-backref" href="#fnref-185" title="Jump back to footnote 185 in the text">↩</a></p>
+</li><li id="fn-186" value="186">
+<p>Mobile Sports Report: AT&amp;T records 29.2 TB of cellular data during Coachella weekends - <a href="https://www.mobilesportsreport.com/2016/04/att-records-29-2-tb-of-cellular-data-during-coachella-weekends/" rel="noopener" target="_blank">mobilesportsreport.com</a>&#160;<a class="footnote-backref" href="#fnref-186" title="Jump back to footnote 186 in the text">↩</a></p>
+</li><li id="fn-187" value="187">
+<p>Verizon News: Verizon customers at Sea.Hear.Now festival, Asbury Park - <a href="https://www.verizon.com/about/news/verizon-customers-seahearnow-festival-asbury-park" rel="noopener" target="_blank">verizon.com</a>&#160;<a class="footnote-backref" href="#fnref-187" title="Jump back to footnote 187 in the text">↩</a></p>
+</li><li id="fn-188" value="188">
+<p>Ticket Fairy: Cellular capacity at festivals - carriers, COWs and DAS - <a href="https://www.ticketfairy.com/blog/cellular-capacity-at-festivals-carriers-cows-and-das" rel="noopener" target="_blank">ticketfairy.com</a>&#160;<a class="footnote-backref" href="#fnref-188" title="Jump back to footnote 188 in the text">↩</a><a class="footnote-backref" href="#fnref2-188" title="Jump back to footnote 188 in the text">↩</a></p>
+</li></ol></div></section><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://polo.cold.fyi">Polo</a> <span>- how Coachella actually works, down to the billboards</span></li><li><a href="https://tickets.cold.fyi">Tickets</a> <span>- how a concert ticket travels from artist to fan, and where the fees go</span></li><li><a href="https://noise.cold.fyi">The Noise</a> <span>- deep dive No. 6, every sound in a city and how loud it really is</span></li><li><a href="https://school.darkroom.ad">Darkroom Ad School</a> <span>- free lessons on selling out a room with Meta ads</span></li><li><a href="https://airwaves.cold.fyi">The Airwaves</a> <span>- deep dive No. 5, every radio signal over a city</span></li><li><a href="https://streetcode.cold.fyi">Street Code</a> <span>- deep dive No. 4, every mark, box and cap on the street</span></li><li><a href="https://works.cold.fyi">How a City Works</a> <span>- deep dive No. 3, the systems behind the sirens, trains and trucks</span></li><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li></ul></aside><footer><span>made with &lt;3 in boston · Independent. Not affiliated with any festival.</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/finder/"><span class="n">01</span>The festival finder</a><a href="/history/"><span class="n">02</span>A short history of the music festival</a><a href="/owners/"><span class="n">03</span>Who owns the festivals</a><a href="/money/"><span class="n">04</span>Where the money goes</a><a href="/lineup/"><span class="n">05</span>How a lineup gets made</a><a href="/selling/"><span class="n">06</span>How festivals sell out</a><a href="/build/"><span class="n">07</span>Building a city in a field</a><a href="/safety/"><span class="n">08</span>Crowds, heat and keeping people safe</a><a href="/wristbands/" class=on><span class="n">09</span>Wristbands, cashless and the gate</a><a href="/camping/"><span class="n">10</span>Camping, getting there and getting home</a><a href="/impact/"><span class="n">11</span>Waste, carbon and the town next door</a><a href="/season/"><span class="n">12</span>The global festival season</a><a href="/new-england/"><span class="n">13</span>New England: from Newport to Boston Calling</a><a href="/quiz/"><span class="n">14</span>Test yourself</a><a href="/glossary/"><span class="n">15</span>The glossary</a><a href="/next/"><span class="n">16</span>Where to go next</a><a href="/open/"><span class="n">17</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">18</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("wb-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (tb) tb.textContent = dark ? "Daylight" : "Lights out";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("wb-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Before 1900": "var(--u-wht)", "1900-1945": "var(--u-red)", "1945-1980": "var(--u-yel)", "1980-2010": "var(--u-blu)", "2010-now": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Before 1900","1900-1945","1945-1980","1980-2010","2010-now"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { History: "var(--u-yel)", Business: "var(--u-pur)", "Lineups and selling": "var(--u-org)", "Production and safety": "var(--u-blu)",
+      "On the ground": "var(--u-grn)", Impact: "var(--u-grn)", "The circuit": "var(--u-pnk)", "New England": "var(--u-blu)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (/^(History)$/.test(d.category) ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* street lookup */
+  (function () {
+    var data = readJSON("lk-data"), list = $("lk-list"); if (!list) return;
+    var q = $("lk-q"), more = $("lk-more"), shown = 24;
+    var onAll = !!document.getElementById("sec-basics");
+    function href(d) { return onAll ? "#" + d.sid : "/" + d.section + "/#" + d.sid; }
+    function score(d, words) {
+      var hay = (d.see + " " + d.is + " " + (d.tags || []).join(" ")).toLowerCase(), s = 0;
+      for (var i = 0; i < words.length; i++) { var w = words[i]; if (hay.indexOf(w) < 0) return -1; if ((d.tags || []).indexOf(w) >= 0) s += 3; if (d.see.toLowerCase().indexOf(w) >= 0) s += 2; s += 1; }
+      return s;
+    }
+    function render() {
+      var words = q.value.trim().toLowerCase().split(/[^a-z0-9]+/).filter(function (w) { return w.length > 1 && ["the","a","an","on","in","of","with","is","and","what","thing","street"].indexOf(w) < 0; });
+      var rows = data.map(function (d) { return { d: d, s: words.length ? score(d, words) : 0 }; }).filter(function (r) { return r.s >= 0; });
+      if (words.length) rows.sort(function (a, b) { return b.s - a.s; });
+      $("lk-count").textContent = rows.length + " of " + data.length + " things";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try one plain word: a color, a shape or a place ("blue", "triangle", "pole").</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown); more.hidden = all <= shown; more.textContent = "Show more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (r) { var d = r.d;
+        return '<li><a href="' + esc(href(d)) + '" style="--lc:var(--u-' + esc(d.c) + ')"><span class="see">' + esc(d.see) + '</span><span class="is">' + esc(d.is) + '</span><span class="sec">' + esc(d.section.replace(/-/g, " ")) + "</span></a></li>";
+      }).join("");
+    }
+    q.addEventListener("input", function () { shown = 24; render(); });
+    more.addEventListener("click", function () { shown += 48; render(); });
+    render();
+  })();
+
+  /* festival finder */
+  (function () {
+    var data = readJSON("fd-data"), list = $("fd-list"); if (!list || !data.length) return;
+    var q = $("fd-q"), m = $("fd-m"), rg = $("fd-r"), cnt = $("fd-count");
+    var MO = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var onAll = !!document.getElementById("sec-history");
+    function render() {
+      var t = (q.value || "").toLowerCase(), mv = +m.value || 0, rv = rg.value;
+      var rows = data.filter(function (d) {
+        if (mv && (d.months || []).indexOf(mv) < 0) return false;
+        if (rv && d.region !== rv) return false;
+        if (t && JSON.stringify(d).toLowerCase().indexOf(t) < 0) return false;
+        return true;
+      });
+      cnt.textContent = rows.length + " of " + data.length + " festivals";
+      list.innerHTML = rows.map(function (d) {
+        var when = (d.months || []).map(function (x) { return MO[x - 1]; }).join(" / ");
+        return "<tr><td><b>" + esc(d.name) + "</b>" + (d.genre ? '<br><span class="s">' + esc(d.genre) + "</span>" : "") + "</td><td>" + esc(d.city || "") + (d.country ? ", " + esc(d.country) : "") +
+          "</td><td>" + esc(when) + "</td><td>" + esc(d.founded || "") + "</td><td>" + esc(d.capacity || "") + "</td><td>" + (d.camping === true ? "Yes" : d.camping === false ? "No" : "") +
+          (d.srcu ? ' <a class="s" href="' + esc(d.srcu) + '" target="_blank" rel="noopener">src</a>' : "") + "</td></tr>";
+      }).join("");
+    }
+    [q, m, rg].forEach(function (e) { e.addEventListener("input", render); e.addEventListener("change", render); });
+    render();
+  })();
+
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>

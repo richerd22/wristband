@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Music Festival Finder: The World&#x27;s Big Festivals by Month and Country | The Wristband</title>
+<meta name="description" content="The big festivals of the world in one filterable table - where, when, since when, how big and whether you camp - plus a year-long calendar of the season...">
+<link rel="canonical" href="https://wristband.cold.fyi/finder/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#f7f2e7">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="Music Festival Finder: The World&#x27;s Big Festivals by Month and Country | The Wristband"><meta property="og:description" content="The big festivals of the world in one filterable table - where, when, since when, how big and whether you camp - plus a year-long calendar of the season...">
+<meta property="og:url" content="https://wristband.cold.fyi/finder/"><meta property="og:image" content="https://wristband.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/league-gothic-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Music Festival Finder: The World's Big Festivals by Month and Country", "description": "The big festivals of the world in one filterable table - where, when, since when, how big and whether you camp - plus a year-long calendar of the season...", "url": "https://wristband.cold.fyi/finder/", "image": "https://wristband.cold.fyi/og.png", "datePublished": "2026-11-05", "dateModified": "2026-11-05", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "The Wristband", "url": "https://wristband.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Wristband", "item": "https://wristband.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "The festival finder", "item": "https://wristband.cold.fyi/finder/"}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'League Gothic';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/league-gothic-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/newsreader-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/newsreader-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/newsreader-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Martian Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/martian-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Martian Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/martian-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: festival paper - a woven wristband hero drawn in code, lineup-poster typography (League Gothic) for contents and headings, backstage-pass reading paths, Newsreader body, Martian Mono data; night mode is the field under UV light */
+:root{
+  color-scheme:light;
+  --bg:#f7f2e7; --panel:#fffcf5; --panel2:#efe7d6; --ink:#16131c; --muted:#5f5867; --line:#ddd3c0;
+  --tape:#ff4d1a; --tape-ink:#16131c; --hot:#e0185e; --cue:#5a2bd6; --sign:#ff4d1a; --sign-ink:#16131c;
+  --ink-on:#ffffff; --ink-on-y:#16131c; --band:#ff4d1a; --band2:#d93a10; --thread:#fff3dc; --uv:#5a2bd6;
+  --u-red:#e0185e; --u-yel:#c99400; --u-org:#ff4d1a; --u-blu:#2d5bdc; --u-grn:#1f8f5a; --u-pur:#6a35d9; --u-pnk:#e0187f; --u-wht:#7a7184;
+  --s1:var(--u-grn); --s2:var(--u-blu); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pnk);
+  --f-display:"League Gothic","Arial Narrow",Impact,sans-serif;
+  --f-body:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-mono:"Martian Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-mono);
+  --measure:68ch; --wide:1040px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#0b0713; --panel:#140d22; --panel2:#1c1430; --ink:#efe9ff; --muted:#a79fbd; --line:#2c2244;
+  --tape:#c6ff3d; --tape-ink:#0b0713; --hot:#ff3ec8; --cue:#7fe3ff; --sign:#c6ff3d; --sign-ink:#0b0713;
+  --ink-on:#0b0713; --ink-on-y:#0b0713; --band:#ff3ec8; --band2:#b81f8d; --thread:#c6ff3d; --uv:#c6ff3d;
+  --u-red:#ff4f86; --u-yel:#ffe14d; --u-org:#ff9a3d; --u-blu:#7fe3ff; --u-grn:#c6ff3d; --u-pur:#b98cff; --u-pnk:#ff3ec8; --u-wht:#d6cfe8;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0b0713; --panel:#140d22; --panel2:#1c1430; --ink:#efe9ff; --muted:#a79fbd; --line:#2c2244;
+  --tape:#c6ff3d; --tape-ink:#0b0713; --hot:#ff3ec8; --cue:#7fe3ff; --sign:#c6ff3d; --sign-ink:#0b0713;
+  --ink-on:#0b0713; --ink-on-y:#0b0713; --band:#ff3ec8; --band2:#b81f8d; --thread:#c6ff3d; --uv:#c6ff3d;
+  --u-red:#ff4f86; --u-yel:#ffe14d; --u-org:#ff9a3d; --u-blu:#7fe3ff; --u-grn:#c6ff3d; --u-pur:#b98cff; --u-pnk:#ff3ec8; --u-wht:#d6cfe8;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:12px;padding:1.4rem 1.4rem 1.3rem;color:#e8ecf5;overflow:hidden;background:#070b18;border:1px solid #26314f;min-height:15rem;display:flex;flex-direction:column;justify-content:flex-end}
+.sign .wf{position:absolute;inset:0;opacity:.9;background:
+  repeating-linear-gradient(0deg,rgba(7,11,24,.0) 0 3px,rgba(7,11,24,.35) 3px 4px),
+  radial-gradient(ellipse 6% 60% at 18% 40%,rgba(255,207,90,.75),transparent 70%),
+  radial-gradient(ellipse 3% 80% at 34% 50%,rgba(79,227,161,.8),transparent 70%),
+  radial-gradient(ellipse 9% 40% at 52% 30%,rgba(90,168,255,.7),transparent 70%),
+  radial-gradient(ellipse 2% 90% at 63% 55%,rgba(255,127,200,.75),transparent 70%),
+  radial-gradient(ellipse 14% 30% at 80% 35%,rgba(185,140,255,.6),transparent 70%),
+  linear-gradient(180deg,#0b1430,#070b18)}
+.sign .dial{position:absolute;left:1.4rem;right:1.4rem;top:1rem;display:flex;justify-content:space-between;font:600 .7rem var(--f-mono);color:#9aa4bb;border-bottom:1px solid #3a4770;padding-bottom:.3rem}
+.sign h1{position:relative;color:#e8ecf5;font-weight:700;font-size:clamp(3.2rem,12vw,6.8rem);line-height:.9;margin:.1rem 0 0;letter-spacing:-.02em}
+.sign h1 span:first-child{font-size:.45em;letter-spacing:.02em;color:#9aa4bb}
+.sign h1 .file{color:#4fe3a1}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:10px;padding:1.4rem 1.4rem 1.2rem;color:#f2f0ea;overflow:hidden;
+  background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.05) 0 1px,transparent 1.5px) 0 0/7px 7px,radial-gradient(circle at 70% 60%,rgba(0,0,0,.25) 0 1px,transparent 1.5px) 0 0/9px 9px,#2c2f32;border:1px solid #3d4246}
+.sign h1{color:#f2f0ea;font-weight:800;font-size:clamp(3.4rem,13vw,7.4rem);line-height:.86;margin:.1rem 0 .5rem;text-transform:uppercase;letter-spacing:.01em}
+.sign h1 .file{color:#ff8a3d}
+.sign .marks{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.4rem}
+.sign .marks span{font-family:var(--f-hand);font-size:1.05rem;line-height:1;padding:.32rem .55rem .2rem;border-radius:3px;color:#1a1c1e;transform:rotate(var(--r,-2deg))}
+.sign .arrow{position:absolute;right:1.2rem;top:1rem;font-family:var(--f-hand);font-size:2.4rem;color:#f5c935;transform:rotate(8deg);line-height:1}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:1rem;letter-spacing:.02em;transform:none;clip-path:none;border-radius:4px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.4rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-grn)}.labels li:nth-child(2){--lc:var(--u-blu)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-pur)}.labels li:nth-child(5){--lc:var(--u-pnk)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.3rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-mono);font-weight:600;font-size:.32em;transform:none;clip-path:none;border-radius:3px;color:var(--sci,#1a1c1e);background:var(--sc,var(--tape));padding:.32em .5em .2em;vertical-align:.55em}
+.chip-n{color:var(--sci,#1a1c1e);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3,.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--tape);color:var(--tape-ink)}
+.seg button[aria-pressed="true"]{color:var(--tape-ink)}
+.btn{color:var(--tape-ink)}
+em:first-child{color:var(--muted)}
+.gl-list .cat{color:var(--ink-on)}
+/* lookup + decoder */
+.lk-tools{display:grid;gap:.7rem}
+.lk-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(16.5rem,1fr));gap:.55rem}
+.lk-list a{display:block;height:100%;background:var(--bg);border:1px solid var(--line);border-left:5px solid var(--lc,var(--tape));border-radius:6px;padding:.6rem .75rem;text-decoration:none;color:var(--ink)}
+.lk-list a:hover{border-color:var(--lc,var(--tape))}
+.lk-list .see{display:block;font-weight:600;font-size:1rem;line-height:1.3}
+.lk-list .is{display:block;font-size:.9rem;line-height:1.4;color:var(--muted);margin-top:.2rem}
+.lk-list .sec{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:.35rem}
+.dec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.55rem;margin-top:.9rem}
+.dec-item{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:.6rem;align-items:start;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem}
+.dec-sw{width:2.6rem;height:2.6rem;border-radius:5px;border:1px solid rgba(0,0,0,.25);display:grid;place-items:center;font-family:var(--f-hand);font-size:.95rem;color:#1a1c1e}
+.dec-item b{display:block;font-size:.98rem;line-height:1.25}
+.dec-item p{margin:.15rem 0 0;font-size:.86rem;line-height:1.38;color:var(--muted)}
+.dec-src{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);margin-top:.7rem;overflow-wrap:anywhere}
+.dec-src a{color:var(--muted)}
+.dg .t.wh{fill:#fff}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-wht{fill:var(--u-wht)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}.dg .w.wht{stroke:var(--u-wht)}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.dg .hand{font-family:var(--f-hand);font-size:15px}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+/* quiz, quick answers, trivia */
+.qz{border-bottom:1px solid var(--line);padding:.8rem 0}
+.qz:last-child{border-bottom:0}
+.qz-q{margin:0 0 .5rem;font-weight:600;font-size:1.02rem;line-height:1.4}
+.qz-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.4rem}
+.qz-o{font:inherit;font-size:.95rem;text-align:left;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.5rem .65rem;cursor:pointer;line-height:1.35}
+.qz-o:hover:not(:disabled){border-color:var(--tape)}
+.qz-o.right{border-color:var(--u-grn);box-shadow:inset 4px 0 0 var(--u-grn)}
+.qz-o.wrong{border-color:var(--u-red);box-shadow:inset 4px 0 0 var(--u-red)}
+.qz-o:disabled{cursor:default}
+.qz-why{margin:.55rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.45}
+.qz-why b{color:var(--ink)}
+.qz-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;flex-wrap:wrap}
+.qa{margin-top:2.6rem}
+.qa h2{font-size:1.6rem!important;margin:0 0 .4rem!important}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+
+/* spectrum ruler */
+.sp .sp-bar{cursor:pointer}
+.sp .sp-bar rect{opacity:.85}
+.sp .sp-bar:hover rect,.sp .sp-bar:focus rect,.sp .sp-bar.on rect{opacity:1;stroke:var(--ink);stroke-width:1.5}
+.sp .sp-bar:focus{outline:none}
+.sp-info{margin-top:.6rem;border-top:1px dashed var(--line);padding-top:.6rem;min-height:4.2rem}
+.sp-info b{font-size:1.02rem}
+.sp-info p{margin:.2rem 0 0;font-size:.92rem;color:var(--muted);line-height:1.45}
+.dg.sp{min-width:900px}
+
+/* ---------- wristband ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.path b,.card b,.tool h4{font-family:var(--f-display);font-weight:400;text-transform:uppercase;letter-spacing:.01em}
+article h2,article h1.sec-h1{font-size:clamp(2.6rem,8vw,4.4rem);line-height:.9}
+article h3{font-family:var(--f-body);font-weight:600}
+.sign.wbsign{position:relative;margin:.4rem 0 1.4rem;max-width:none;padding:0;background:none;border:0;box-shadow:none;min-height:0;display:block;overflow:visible}
+.wb{display:block;width:calc(100% + 2rem);margin:0 -1rem;height:auto;filter:drop-shadow(0 10px 18px rgba(22,19,28,.18))}
+.wb-band{fill:var(--band)} .wb-band2{fill:var(--band2)}
+.wb-th{stroke:var(--thread);stroke-width:.6;opacity:.35} .wb-th2{stroke:#000;stroke-width:.6;opacity:.12}
+.wb-stitch{stroke:var(--thread);stroke-width:2;stroke-dasharray:6 5;fill:none;opacity:.8}
+.wb-txt{font-family:var(--f-display);font-size:26px;letter-spacing:3px;fill:var(--thread)}
+.wb-dia{fill:none;stroke:var(--thread);stroke-width:1.6;opacity:.8}
+:root[data-theme="dark"] .wb{filter:drop-shadow(0 0 22px rgba(255,62,200,.45))}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .wb{filter:drop-shadow(0 0 22px rgba(255,62,200,.45))}}
+.sign.wbsign h1{color:var(--ink);font-size:clamp(5rem,22vw,13rem);line-height:.82;margin:.2rem 0 0;letter-spacing:-.005em;text-shadow:none}
+.sign.wbsign h1 .file{color:var(--ink)}
+.dek{font-size:clamp(1.2rem,2.8vw,1.5rem)}
+.labels li{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.02em;background:none;color:var(--ink);border:0;border-left:0;padding:0;box-shadow:none;transform:none;clip-path:none;text-transform:uppercase}
+.labels{gap:.4rem 1.2rem}
+.labels b{font-family:var(--f-display);font-size:1.6rem;font-weight:400;margin-right:.35rem;vertical-align:-.15em}
+/* passes */
+.path.pass{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:2.1rem .9rem .9rem;overflow:hidden}
+.path.pass .hole{position:absolute;top:.6rem;left:50%;width:34px;height:8px;margin-left:-17px;border-radius:6px;background:var(--bg);box-shadow:inset 0 1px 2px rgba(0,0,0,.25)}
+.path.pass .tier{position:absolute;top:0;right:0;font-family:var(--f-display);font-size:1.6rem;line-height:1;padding:.35rem .6rem .25rem;background:var(--band);color:var(--thread);border-bottom-left-radius:10px}
+.path.pass:nth-child(2) .tier{background:var(--u-pur);color:#fff}.path.pass:nth-child(3) .tier{background:var(--ink);color:var(--bg)}
+.path.pass:nth-child(4) .tier{background:var(--u-yel);color:var(--ink)}.path.pass:nth-child(5) .tier{background:var(--u-pnk);color:#fff}.path.pass:nth-child(6) .tier{background:var(--u-blu);color:#fff}
+.path.pass b{font-size:1.9rem;line-height:.95}
+/* lineup poster */
+.poster{margin:2rem 0 1rem;background:var(--ink);color:var(--bg);border-radius:6px;padding:1.6rem 1.2rem 1.2rem;text-align:center;position:relative;overflow:hidden}
+.poster::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 2px,transparent 2px 5px);pointer-events:none}
+.poster .ph{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin:0 0 .3rem}
+.poster .pt{font-family:var(--f-display);font-size:clamp(3.4rem,11vw,6.4rem);line-height:.85;margin:0 0 1rem;color:var(--band)}
+.poster .day{border-top:1px solid rgba(255,255,255,.18);padding:.9rem 0 .6rem}
+.poster .dn{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--band);margin-bottom:.4rem}
+.poster a{color:inherit;text-decoration:none;font-family:var(--f-display);text-transform:uppercase;line-height:1}
+.poster a:hover{color:var(--band)}
+.poster .t1 a{font-size:clamp(2.6rem,8vw,4.6rem);display:inline-block}
+.poster .t2{margin:.35rem 0}.poster .t2 a{font-size:clamp(1.5rem,4vw,2.3rem)}
+.poster .t3 a{font-size:clamp(1.1rem,2.6vw,1.5rem);opacity:.85}
+.poster .dot{opacity:.45;margin:0 .45rem;font-family:var(--f-display)}
+.poster .fine{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;opacity:.55;margin-top:.8rem;text-transform:uppercase}
+:root[data-theme="dark"] .poster{background:#000;box-shadow:0 0 0 1px var(--line),0 0 40px rgba(198,255,61,.08)}
+/* finder + calendar */
+.fd-tools{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.6rem;margin-bottom:.6rem}
+@media (max-width:640px){.fd-tools{grid-template-columns:1fr 1fr}.fd-tools .field:first-child{grid-column:1/-1}}
+.fd td:first-child b{font-family:var(--f-display);font-weight:400;font-size:1.25rem;text-transform:uppercase;letter-spacing:.01em}
+.fd td{font-size:.9rem;vertical-align:top}.fd td .s{font-size:.75rem;color:var(--muted)}
+.cal{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem}
+@media (max-width:760px){.cal{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:420px){.cal{grid-template-columns:repeat(2,1fr)}}
+.cal .mo{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.5rem .55rem;min-width:0;position:relative}
+.cal .mo.hot{border-color:var(--band);box-shadow:inset 0 3px 0 var(--band)}
+.cal h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.6rem;text-transform:uppercase;line-height:1}
+.cal .n{position:absolute;top:.5rem;right:.55rem;font-family:var(--f-mono);font-size:.7rem;color:var(--muted)}
+.cal ul{list-style:none;margin:.35rem 0 0;padding:0;font-size:.8rem;line-height:1.35}
+.cal .cc{font-family:var(--f-mono);font-size:.62rem;color:var(--muted);margin-right:.3rem}
+.cal .more{color:var(--muted);font-style:italic}
+.chip-n{font-family:var(--f-display);font-size:1rem}
+.card b{font-size:1.7rem;line-height:.95}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-finder">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">The Wristband</a> / The festival finder</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">The Wristband</a></h2><a href="/finder/" class=on aria-current=page><span class="n">01</span>The festival finder</a><a href="/history/"><span class="n">02</span>A short history of the music festival</a><a href="/owners/"><span class="n">03</span>Who owns the festivals</a><a href="/money/"><span class="n">04</span>Where the money goes</a><a href="/lineup/"><span class="n">05</span>How a lineup gets made</a><a href="/selling/"><span class="n">06</span>How festivals sell out</a><a href="/build/"><span class="n">07</span>Building a city in a field</a><a href="/safety/"><span class="n">08</span>Crowds, heat and keeping people safe</a><a href="/wristbands/"><span class="n">09</span>Wristbands, cashless and the gate</a><a href="/camping/"><span class="n">10</span>Camping, getting there and getting home</a><a href="/impact/"><span class="n">11</span>Waste, carbon and the town next door</a><a href="/season/"><span class="n">12</span>The global festival season</a><a href="/new-england/"><span class="n">13</span>New England: from Newport to Boston Calling</a><a href="/quiz/"><span class="n">14</span>Test yourself</a><a href="/glossary/"><span class="n">15</span>The glossary</a><a href="/next/"><span class="n">16</span>Where to go next</a><a href="/open/"><span class="n">17</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">18</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 01 of 18 · about 11 min read · updated November 2026</p><section class="sec" style="--sc:var(--u-pnk);--sci:var(--ink-on-y)"><h1 class="sec-h1" id="sec-finder" style="--sc:var(--u-pnk);--sci:var(--ink-on-y)"><span class="tape">01</span>The festival finder</h1>
+<p class="short"><strong>The short version:</strong> The big festivals of the world in one filterable table - where, when, since when, how big and whether you camp - plus a year-long calendar of the season and a decoder for the words, fees and objects you run into on the way in. Every row links to its source; dates move, so check the official site before you book.</p>
+<div class="mod wide" id="finder-tool"><div class="mod-head"><div class="kicker">Festival finder</div><h3>47 festivals, filtered your way</h3><p>Months, sizes and founding years come from each festival's own site or the reporting cited in the guide; editions shift, so check the official page before you book.</p></div><div class="mod-body"><div class="fd-tools"><label class="field" for="fd-q">Search<input id="fd-q" type="search" placeholder="Try: Japan, camping, techno, 1970" autocomplete="off"></label><label class="field" for="fd-m">Month<select id="fd-m"><option value="">Any</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select></label><label class="field" for="fd-r">Region<select id="fd-r"><option value="">Anywhere</option><option value="Africa">Africa</option><option value="Asia">Asia</option><option value="Europe">Europe</option><option value="Latin America">Latin America</option><option value="Middle East">Middle East</option><option value="North America">North America</option><option value="Oceania">Oceania</option><option value="UK and Ireland">UK and Ireland</option></select></label></div><span class="count" id="fd-count"></span><div class="tbl wide"><table class="fd"><thead><tr><th>Festival</th><th>Where</th><th>When</th><th>Since</th><th>Size</th><th>Camping</th></tr></thead><tbody id="fd-list"></tbody></table></div><script id="fd-data" type="application/json">[{"name": "EDC Thailand", "country": "Thailand", "country_code": "TH", "city": "Phuket", "region": "Asia", "months": [1], "founded": 2025, "capacity": null, "camping": null, "genre": "electronic", "section": "season", "key": "glo-wiki-edc", "srcu": "https://en.wikipedia.org/wiki/Electric_Daisy_Carnival", "srct": "Wikipedia: Electric Daisy Carnival"}, {"name": "EDC Mexico", "country": "Mexico", "country_code": "MX", "city": "Mexico City (Autódromo Hermanos Rodríguez)", "region": "Latin America", "months": [2, 3], "founded": 2014, "capacity": "about 120,000 (2019, Wikipedia)", "camping": null, "genre": "electronic", "section": "season", "key": "glo-wiki-edc", "srcu": "https://en.wikipedia.org/wiki/Electric_Daisy_Carnival", "srct": "Wikipedia: Electric Daisy Carnival"}, {"name": "Laneway", "country": "Australia", "country_code": "AU", "city": "Touring: Auckland, Gold Coast, Sydney, Melbourne, Adelaide, Perth", "region": "Oceania", "months": [2], "founded": null, "capacity": null, "camping": null, "genre": "indie, multi-genre", "section": "season", "key": "glo-thenote-laneway-2026", "srcu": "https://www.thenote.com.au/news/laneway-festival-2026-dates-venues", "srct": "The Note: Laneway Festival 2026 dates and venues"}, {"name": "Lollapalooza Argentina", "country": "Argentina", "country_code": "AR", "city": "San Isidro, Buenos Aires", "region": "Latin America", "months": [3], "founded": null, "capacity": null, "camping": null, "genre": "multi-genre", "section": "season", "key": "glo-prensamercosur-lolla-ar-2025", "srcu": "https://prensamercosur.org/2025/03/21/lollapalooza-argentina-2025-todos-los-detalles-de-la-decima-edicion-del-megafestival-mas-importante-del-ano/", "srct": "Prensa Mercosur: Lollapalooza Argentina 2025, la decima edicion"}, {"name": "Ultra Music Festival", "country": "United States", "country_code": "US", "city": "Miami (Bayfront Park)", "region": "North America", "months": [3], "founded": 1999, "capacity": "about 165,000 over three days (2026, Wikipedia)", "camping": null, "genre": "electronic", "section": "season", "key": "gf-f-wiki-ultra", "srcu": "https://en.wikipedia.org/wiki/Ultra_Music_Festival", "srct": "Wikipedia: Ultra Music Festival"}, {"name": "Coachella", "country": "United States", "country_code": "US", "city": "Indio, California (Empire Polo Club)", "region": "North America", "months": [4], "founded": 1999, "capacity": "125,000 a day, city attendance cap (raised in 2016, Wikipedia)", "camping": true, "genre": "multi-genre", "section": "season", "key": "gf-f-wiki-coachella", "srcu": "https://en.wikipedia.org/wiki/Coachella", "srct": "Wikipedia: Coachella"}, {"name": "Boston Calling", "country": "United States", "country_code": "US", "city": "Boston (Allston)", "region": "North America", "months": [5, 6], "founded": 2013, "capacity": null, "camping": false, "genre": "rock, pop, indie (no 2026 edition; organizers announced a June 4-6, 2027 return)", "section": "new-england", "key": "ne-globe-bc-2026", "srcu": "https://www.bostonglobe.com/2025/06/20/arts/boston-calling-canceled-2026/", "srct": "Boston Globe: Boston Calling canceled for 2026"}, {"name": "EDC Las Vegas", "country": "United States", "country_code": "US", "city": "Las Vegas (Las Vegas Motor Speedway)", "region": "North America", "months": [5], "founded": 1997, "capacity": "over 525,000 over three nights (2024, reported)", "camping": true, "genre": "electronic", "section": "season", "key": "glo-news3lv-edc-2024", "srcu": "https://www.news3lv.com/news/local/edc-2025-ticket-rush-begins-as-over-500k-fans-attend-this-years-festival", "srct": "News 3 Las Vegas: EDC ticket rush begins as over 500K fans attend this year's festival"}, {"name": "Bonnaroo", "country": "United States", "country_code": "US", "city": "Manchester, Tennessee", "region": "North America", "months": [6], "founded": 2002, "capacity": "about 70,000 (2024, Wikipedia)", "camping": true, "genre": "multi-genre", "section": "season", "key": "glo-wiki-bonnaroo", "srcu": "https://en.wikipedia.org/wiki/Bonnaroo", "srct": "Wikipedia: Bonnaroo"}, {"name": "Glastonbury", "country": "United Kingdom", "country_code": "GB", "city": "Worthy Farm, Somerset", "region": "UK and Ireland", "months": [6], "founded": 1970, "capacity": "license for up to 210,000 on site incl. staff and performers (2025, reported)", "camping": true, "genre": "multi-genre", "section": "season", "key": "glo-ap-glastonbury-numbers-2025", "srcu": "https://www.news4jax.com/entertainment/2025/06/25/count-down-to-glastonbury-with-all-the-numbers-you-need-to-know/", "srct": "AP via News4Jax: Count down to Glastonbury with all the numbers you need to know"}, {"name": "Governors Ball", "country": "United States", "country_code": "US", "city": "New York City (Flushing Meadows Corona Park, Queens)", "region": "North America", "months": [6], "founded": 2011, "capacity": "about 150,000 attendance (2015, Wikipedia)", "camping": null, "genre": "multi-genre", "section": "season", "key": "gf-f-wiki-govball", "srcu": "https://en.wikipedia.org/wiki/Governors_Ball_Music_Festival", "srct": "Wikipedia: Governors Ball Music Festival"}, {"name": "Green River Festival", "country": "United States", "country_code": "US", "city": "Greenfield, MA", "region": "North America", "months": [6], "founded": 1986, "capacity": "50+ bands on four stages (2026, reported); attendance not published", "camping": true, "genre": "Americana, indie, roots", "section": "new-england", "key": "ne-greenriver-history", "srcu": "https://www.greenriverfestival.com/history", "srct": "Green River Festival: History (official)"}, {"name": "Hellfest", "country": "France", "country_code": "FR", "city": "Clisson", "region": "Europe", "months": [6], "founded": 2006, "capacity": "about 60,000 a day (2022, Wikipedia)", "camping": null, "genre": "metal, hard rock", "section": "season", "key": "gf-f-wiki-hellfest", "srcu": "https://en.wikipedia.org/wiki/Hellfest", "srct": "Wikipedia: Hellfest"}, {"name": "Primavera Sound Barcelona", "country": "Spain", "country_code": "ES", "city": "Barcelona", "region": "Europe", "months": [6], "founded": 2001, "capacity": "about 293,000 attendees (2025, organizer figure)", "camping": null, "genre": "indie, multi-genre", "section": "season", "key": "glo-catalannews-primavera-2025", "srcu": "https://www.catalannews.com/culture/item/primavera-sound-barcelona-attendance-record-7-june-2025", "srct": "Catalan News: Primavera Sound sets new attendance record"}, {"name": "Primavera Sound Porto", "country": "Portugal", "country_code": "PT", "city": "Porto (Parque da Cidade)", "region": "Europe", "months": [6], "founded": 2012, "capacity": "over 110,000 attendees (2025, organizer preliminary count)", "camping": null, "genre": "indie, multi-genre", "section": "season", "key": "gf-f-rr-primavera-porto-2026", "srcu": "https://rr.pt/noticia/vida/2025/06/15/primavera-sound-regressa-ao-porto-entre-os-dias-11-e-13-de-junho-de-2026/429215/", "srct": "Renascença: Primavera Sound regressa ao Porto entre os dias 11 e 13 de junho de 2026"}, {"name": "Rock am Ring", "country": "Germany", "country_code": "DE", "city": "Nürburgring", "region": "Europe", "months": [6], "founded": null, "capacity": "90,000 tickets, sold out (2025, reported)", "camping": null, "genre": "rock", "section": "season", "key": "glo-iq-rock-am-ring-2025", "srcu": "https://www.iqmagazine.com/2025/03/rock-am-ring-shifts-90000-tickets-in-record-time/", "srct": "IQ Magazine: Rock am Ring shifts 90,000 tickets in record time"}, {"name": "Roskilde", "country": "Denmark", "country_code": "DK", "city": "Roskilde", "region": "Europe", "months": [6, 7], "founded": 1971, "capacity": "130,000+ attendance (2024, Wikipedia)", "camping": true, "genre": "multi-genre", "section": "season", "key": "glo-wiki-roskilde", "srcu": "https://en.wikipedia.org/wiki/Roskilde_Festival", "srct": "Wikipedia: Roskilde Festival"}, {"name": "Solid Sound", "country": "United States", "country_code": "US", "city": "North Adams, MA (MASS MoCA)", "region": "North America", "months": [6], "founded": 2010, "capacity": "sold out at about 7,600 (2024, reported); held every two years", "camping": null, "genre": "rock, curated by Wilco", "section": "new-england", "key": "ne-wamc-solidsound-2024", "srcu": "https://www.wamc.org/news/2024-07-02/mass-moca-north-adams-say-eighth-solid-sound-festival-went-off-without-a-hitch", "srct": "WAMC: MASS MoCA, North Adams say eighth Solid Sound festival went off without a hitch"}, {"name": "Afro Nation Portugal", "country": "Portugal", "country_code": "PT", "city": "Portimão", "region": "Europe", "months": [7], "founded": 2019, "capacity": "about 40,000 from 140 countries (2023, Wikipedia)", "camping": null, "genre": "Afrobeats, amapiano, dancehall", "section": "season", "key": "glo-wiki-afronation", "srcu": "https://en.wikipedia.org/wiki/Afro_Nation", "srct": "Wikipedia: Afro Nation"}, {"name": "Awakenings", "country": "Netherlands", "country_code": "NL", "city": "Hilvarenbeek", "region": "Europe", "months": [7], "founded": null, "capacity": "over 119,000 visitors, sold out (2026, organizer)", "camping": null, "genre": "techno", "section": "season", "key": "glo-mixmagnl-awakenings-2026", "srcu": "https://mixmagnl.com/read/awakenings-festival-2026-is-sold-out-and-set-to-make-history-with-its-biggest-edition-ever-news", "srct": "Mixmag NL: Awakenings Festival 2026 is sold out with its biggest edition ever"}, {"name": "Dekmantel", "country": "Netherlands", "country_code": "NL", "city": "Amsterdam (Amsterdamse Bos)", "region": "Europe", "months": [7, 8], "founded": null, "capacity": null, "camping": true, "genre": "electronic", "section": "season", "key": "gf-f-dekmantel-faq", "srcu": "https://dekmantelfestival.com/faq", "srct": "Dekmantel Festival (official): FAQ"}, {"name": "Exit", "country": "Serbia", "country_code": "RS", "city": "Novi Sad", "region": "Europe", "months": [7], "founded": 2000, "capacity": null, "camping": null, "genre": "multi-genre, electronic", "section": "season", "key": "glo-mixmag-exit-serbia-2025", "srcu": "https://mixmag.net/read/serbias-exit-festival-to-end-after-25-years-news", "srct": "Mixmag: EXIT Festival confirms 2025 edition will be its last in Serbia"}, {"name": "FIB Benicàssim", "country": "Spain", "country_code": "ES", "city": "Benicàssim", "region": "Europe", "months": [7], "founded": null, "capacity": "more than 135,000 attendees (2024, reported)", "camping": null, "genre": "indie, multi-genre", "section": "season", "key": "glo-dod-fib-2024", "srcu": "https://www.dodmagazine.es/el-fib-2024-cierra-filas-con-mas-de-135-000-asistentes-y-anuncia-las-fechas-de-su-edicion-de-2025/", "srct": "DOD Magazine: El FIB 2024 cierra filas con mas de 135.000 asistentes"}, {"name": "Fuji Rock", "country": "Japan", "country_code": "JP", "city": "Naeba, Niigata", "region": "Asia", "months": [7], "founded": 1997, "capacity": "122,000 over four days (2025, organizer)", "camping": true, "genre": "rock, multi-genre", "section": "season", "key": "glo-mixmagasia-fujirock-2025", "srcu": "https://mixmag.asia/read/fuji-rock-2025-draws-122-000-attendees-new-stage-debut-performances-local", "srct": "Mixmag Asia: Fuji Rock 2025 draws 122,000 attendees"}, {"name": "Levitate Music & Arts Festival", "country": "United States", "country_code": "US", "city": "Marshfield, MA (Marshfield Fairgrounds)", "region": "North America", "months": [7], "founded": 2013, "capacity": "about 20,000 per day (2023, reported); 'around 15,000' per a 2024 interview", "camping": null, "genre": "reggae, rock, jam", "section": "new-england", "key": "ne-wbur-levitate-2023", "srcu": "https://www.wbur.org/news/2023/07/06/how-levitate-music-festival-was-born-at-a-surf-shop", "srct": "WBUR: How Levitate Music Festival was born at a surf shop"}, {"name": "Lollapalooza Chicago", "country": "United States", "country_code": "US", "city": "Chicago", "region": "North America", "months": [7, 8], "founded": 1991, "capacity": "roughly 115,000 a day (2025, city figures)", "camping": null, "genre": "multi-genre", "section": "season", "key": "glo-groundnews-lolla-2025", "srcu": "https://ground.news/article/lollapalooza-drew-115-000-people-per-day-with-only-12-arrests-officials-say", "srct": "Ground News: Lollapalooza drew 115,000 people per day with only 12 arrests, officials say"}, {"name": "Mad Cool", "country": "Spain", "country_code": "ES", "city": "Madrid", "region": "Europe", "months": [7], "founded": null, "capacity": null, "camping": null, "genre": "rock, multi-genre", "section": "season", "key": "glo-elindependiente-madcool-2025", "srcu": "https://www.elindependiente.com/tendencias/2025/07/09/mad-cool-2025-muse/amp/", "srct": "El Independiente: Mad Cool 2025"}, {"name": "Newport Folk Festival", "country": "United States", "country_code": "US", "city": "Newport, RI (Fort Adams State Park)", "region": "North America", "months": [7], "founded": 1959, "capacity": "more than 10,000 expected per day (2026, reported)", "camping": null, "genre": "folk, Americana", "section": "new-england", "key": "ne-turnto10-folk-2026", "srcu": "https://turnto10.com/news/local/story/newport-folk-festival-returns-to-fort-adams-state-park-july-24-2026", "srct": "Turn to 10 (WJAR): Newport Folk Festival returns to Fort Adams State Park"}, {"name": "Newport Jazz Festival", "country": "United States", "country_code": "US", "city": "Newport, RI (Fort Adams State Park)", "region": "North America", "months": [7, 8], "founded": 1954, "capacity": "Fort Adams capacity crowds of 10,000 (2023, state figure)", "camping": null, "genre": "jazz", "section": "new-england", "key": "ne-whatsupnewp-jazz-2026", "srcu": "https://whatsupnewp.com/2026/04/newport-jazz-festival-unveils-2026-lineup/", "srct": "What's Up Newp: Newport Jazz Festival unveils 2026 lineup"}, {"name": "Rock Werchter", "country": "Belgium", "country_code": "BE", "city": "Werchter (Festivalpark)", "region": "Europe", "months": [7], "founded": 1975, "capacity": "nearly 90,000 a day (2025, reported)", "camping": true, "genre": "rock, multi-genre", "section": "season", "key": "glo-belga-belgium-summer-2025", "srcu": "https://www.belganewsagency.eu/beyond-the-music-belgiums-big-summer-festival-moments", "srct": "Belga News Agency: Beyond the music - Belgium's big summer festival moments"}, {"name": "Splendour in the Grass", "country": "Australia", "country_code": "AU", "city": "North Byron Parklands, NSW", "region": "Oceania", "months": [7], "founded": null, "capacity": null, "camping": null, "genre": "multi-genre (canceled 2024 and 2025)", "section": "season", "key": "gf-f-aap-splendour-2025", "srcu": "https://pilbaranews.com.au/entertainment/aussie-music-festival-splendour-in-the-grass-cancelled-second-year-in-a-row-c-17479490", "srct": "Pilbara News (AAP): Splendour in the Grass cancelled second year in a row"}, {"name": "Tomorrowland", "country": "Belgium", "country_code": "BE", "city": "Boom", "region": "Europe", "months": [7], "founded": 2005, "capacity": "400,000 ticket holders over two weekends (2025, reported)", "camping": true, "genre": "electronic", "section": "season", "key": "glo-iq-tomorrowland-sellout-2025", "srcu": "https://www.iqmagazine.com/2025/02/tomorrowland-200000-tickets-18-minutes/", "srct": "IQ Magazine: Tomorrowland 2025 becomes latest speedy sellout"}, {"name": "Wacken Open Air", "country": "Germany", "country_code": "DE", "city": "Wacken, Schleswig-Holstein", "region": "Europe", "months": [7, 8], "founded": 1990, "capacity": "about 85,000 paying attendees (2025, Wikipedia; its attendee column lists 68,000)", "camping": true, "genre": "metal", "section": "season", "key": "gf-f-wiki-wacken", "srcu": "https://en.wikipedia.org/wiki/Wacken_Open_Air", "srct": "Wikipedia: Wacken Open Air"}, {"name": "Burning Man", "country": "United States", "country_code": "US", "city": "Black Rock City, Nevada", "region": "North America", "months": [8], "founded": null, "capacity": null, "camping": null, "genre": "participatory event (says it is not a festival)", "section": "season", "key": "glo-bmjournal-friends-2017", "srcu": "https://journal.burningman.org/2017/04/opinion/serious-stuff/friends-dont-let-friends-call-burning-man-a-festival", "srct": "Burning Man Journal: Friends don't let friends call Burning Man a festival"}, {"name": "Lowlands", "country": "Netherlands", "country_code": "NL", "city": "Biddinghuizen", "region": "Europe", "months": [8], "founded": 1993, "capacity": "65,000 (2025, Wikipedia)", "camping": true, "genre": "multi-genre", "section": "season", "key": "gf-f-wiki-lowlands", "srcu": "https://en.wikipedia.org/wiki/Lowlands_(festival)", "srct": "Wikipedia: Lowlands (festival)"}, {"name": "Outside Lands", "country": "United States", "country_code": "US", "city": "San Francisco (Golden Gate Park)", "region": "North America", "months": [8], "founded": 2008, "capacity": "around 75,000 a day expected (2022, reported)", "camping": null, "genre": "multi-genre", "section": "season", "key": "gf-f-kron4-outsidelands-2022", "srcu": "https://www.kron4.com/news/bay-area/outside-lands-expected-to-draw-around-75000-people-a-day/amp", "srct": "KRON4: Outside Lands expected to draw around 75,000 people a day"}, {"name": "Pukkelpop", "country": "Belgium", "country_code": "BE", "city": "Hasselt", "region": "Europe", "months": [8], "founded": null, "capacity": "at least 66,000 a day over four days (2025, reported)", "camping": null, "genre": "multi-genre", "section": "season", "key": "glo-belga-belgium-summer-2025", "srcu": "https://www.belganewsagency.eu/beyond-the-music-belgiums-big-summer-festival-moments", "srct": "Belga News Agency: Beyond the music - Belgium's big summer festival moments"}, {"name": "Reading and Leeds", "country": "United Kingdom", "country_code": "GB", "city": "Reading (Richfield Avenue) and Leeds (Bramham Park)", "region": "UK and Ireland", "months": [8], "founded": null, "capacity": null, "camping": true, "genre": "rock, multi-genre", "section": "season", "key": "gf-f-timeout-readingleeds-2026", "srcu": "https://www.timeout.com/uk/news/reading-and-leeds-festival-2026-guide-set-times-lineup-082626", "srct": "Time Out: Reading and Leeds Festival 2026 guide"}, {"name": "Summer Sonic", "country": "Japan", "country_code": "JP", "city": "Tokyo (ZOZO Marine Stadium and Makuhari Messe, Chiba) and Osaka (Expo '70 Commemorative Park)", "region": "Asia", "months": [8], "founded": 2000, "capacity": "179,000 in Tokyo and 110,000 in Osaka (2026, organizer)", "camping": null, "genre": "rock, pop, multi-genre", "section": "season", "key": "gf-f-summersonic-2026", "srcu": "https://summersonic.com/en/news/2026-08-21-52711/", "srct": "Summer Sonic (official): SUMMER SONIC 2026 comes to a close"}, {"name": "Sziget", "country": "Hungary", "country_code": "HU", "city": "Budapest", "region": "Europe", "months": [8], "founded": null, "capacity": "416,000 visitors over six days (2025, reported)", "camping": null, "genre": "multi-genre", "section": "season", "key": "glo-hungarytoday-sziget-2025", "srcu": "https://hungarytoday.hu/sziget-festival-draws-416000-visitors-but-still-falls-short-of-making-profit/", "srct": "Hungary Today: Sziget draws 416,000 visitors but still falls short of making profit"}, {"name": "Rock in Rio", "country": "Brazil", "country_code": "BR", "city": "Rio de Janeiro", "region": "Latin America", "months": [9], "founded": 1985, "capacity": "over 11.2 million cumulative attendees since 1985 (as of 2024, reported)", "camping": null, "genre": "rock, pop, multi-genre", "section": "season", "key": "glo-eqi-rockinrio-2024", "srcu": "https://euqueroinvestir.com/negocios/rock-in-rio-2024-veja-fatos-numeros/", "srct": "Eu Quero Investir: Rock in Rio 2024 - fatos e numeros"}, {"name": "Austin City Limits Music Festival", "country": "United States", "country_code": "US", "city": "Austin, Texas (Zilker Park)", "region": "North America", "months": [10], "founded": 2002, "capacity": "about 75,000 a day, 450,000 over six days (2025, Wikipedia)", "camping": null, "genre": "multi-genre", "section": "season", "key": "gf-f-wiki-acl", "srcu": "https://en.wikipedia.org/wiki/Austin_City_Limits_Music_Festival", "srct": "Wikipedia: Austin City Limits Music Festival"}, {"name": "EDC Orlando", "country": "United States", "country_code": "US", "city": "Orlando (Tinker Field)", "region": "North America", "months": [11], "founded": 2011, "capacity": "about 300,000 (2023, Wikipedia)", "camping": null, "genre": "electronic", "section": "season", "key": "glo-wiki-edc", "srcu": "https://en.wikipedia.org/wiki/Electric_Daisy_Carnival", "srct": "Wikipedia: Electric Daisy Carnival"}, {"name": "Nyege Nyege", "country": "Uganda", "country_code": "UG", "city": "Jinja", "region": "Africa", "months": [11], "founded": 2015, "capacity": "about 20,000 (2023, reported)", "camping": null, "genre": "underground electronic", "section": "season", "key": "glo-ra-nyege-2024", "srcu": "https://ra.co/news/80725", "srct": "Resident Advisor: Nyege Nyege 2024 news"}, {"name": "MDLBEAST Soundstorm", "country": "Saudi Arabia", "country_code": "SA", "city": "Riyadh (Banban)", "region": "Middle East", "months": [12], "founded": null, "capacity": "over 180,000 on day one (2021, reported)", "camping": null, "genre": "electronic, multi-genre", "section": "season", "key": "glo-aawsat-soundstorm-2021", "srcu": "https://english.aawsat.com/home/article/3365806/over-180000-attend-first-day-saudi-arabias-%E2%80%98mdlbeast-soundstorm%E2%80%99?page=4", "srct": "Asharq Al-Awsat: Over 180,000 attend first day of Saudi Arabia's MDLBEAST Soundstorm"}, {"name": "EDC China", "country": "China", "country_code": "CN", "city": "Suzhou (Yang Cheng Lake); Shanghai in 2018", "region": "Asia", "months": [], "founded": 2018, "capacity": null, "camping": null, "genre": "electronic", "section": "season", "key": "glo-wiki-edc", "srcu": "https://en.wikipedia.org/wiki/Electric_Daisy_Carnival", "srct": "Wikipedia: Electric Daisy Carnival"}, {"name": "EDC Korea", "country": "South Korea", "country_code": "KR", "city": "Incheon (Inspire Arena); Gwacheon in 2019", "region": "Asia", "months": [], "founded": 2019, "capacity": null, "camping": null, "genre": "electronic", "section": "season", "key": "glo-wiki-edc", "srcu": "https://en.wikipedia.org/wiki/Electric_Daisy_Carnival", "srct": "Wikipedia: Electric Daisy Carnival"}]</script></div></div>
+
+<h3 id="the-season-month-by-month">The season, month by month</h3>
+<div class="mod wide" id="calendar-tool"><div class="mod-head"><div class="kicker">The season</div><h3>A year of festivals, month by month</h3></div><div class="mod-body"><div class="cal"><div class="mo"><h4>Jan</h4><span class="n">1</span><ul><li><span class="cc">TH</span>EDC Thailand</li></ul></div><div class="mo"><h4>Feb</h4><span class="n">2</span><ul><li><span class="cc">MX</span>EDC Mexico</li><li><span class="cc">AU</span>Laneway</li></ul></div><div class="mo"><h4>Mar</h4><span class="n">3</span><ul><li><span class="cc">MX</span>EDC Mexico</li><li><span class="cc">AR</span>Lollapalooza Argentina</li><li><span class="cc">US</span>Ultra Music Festival</li></ul></div><div class="mo"><h4>Apr</h4><span class="n">1</span><ul><li><span class="cc">US</span>Coachella</li></ul></div><div class="mo"><h4>May</h4><span class="n">2</span><ul><li><span class="cc">US</span>Boston Calling</li><li><span class="cc">US</span>EDC Las Vegas</li></ul></div><div class="mo hot"><h4>Jun</h4><span class="n">11</span><ul><li><span class="cc">US</span>Boston Calling</li><li><span class="cc">US</span>Bonnaroo</li><li><span class="cc">GB</span>Glastonbury</li><li><span class="cc">US</span>Governors Ball</li><li><span class="cc">US</span>Green River Festival</li><li><span class="cc">FR</span>Hellfest</li><li><span class="cc">ES</span>Primavera Sound Barcelona</li><li><span class="cc">PT</span>Primavera Sound Porto</li><li><span class="cc">DE</span>Rock am Ring</li><li><span class="cc">DK</span>Roskilde</li><li><span class="cc">US</span>Solid Sound</li></ul></div><div class="mo hot"><h4>Jul</h4><span class="n">16</span><ul><li><span class="cc">DK</span>Roskilde</li><li><span class="cc">PT</span>Afro Nation Portugal</li><li><span class="cc">NL</span>Awakenings</li><li><span class="cc">NL</span>Dekmantel</li><li><span class="cc">RS</span>Exit</li><li><span class="cc">ES</span>FIB Benicàssim</li><li><span class="cc">JP</span>Fuji Rock</li><li><span class="cc">US</span>Levitate Music &amp; Arts Festival</li><li><span class="cc">US</span>Lollapalooza Chicago</li><li><span class="cc">ES</span>Mad Cool</li><li><span class="cc">US</span>Newport Folk Festival</li><li><span class="cc">US</span>Newport Jazz Festival</li><li><span class="cc">BE</span>Rock Werchter</li><li><span class="cc">AU</span>Splendour in the Grass</li><li class="more">+2 more</li></ul></div><div class="mo hot"><h4>Aug</h4><span class="n">11</span><ul><li><span class="cc">NL</span>Dekmantel</li><li><span class="cc">US</span>Lollapalooza Chicago</li><li><span class="cc">US</span>Newport Jazz Festival</li><li><span class="cc">DE</span>Wacken Open Air</li><li><span class="cc">US</span>Burning Man</li><li><span class="cc">NL</span>Lowlands</li><li><span class="cc">US</span>Outside Lands</li><li><span class="cc">BE</span>Pukkelpop</li><li><span class="cc">GB</span>Reading and Leeds</li><li><span class="cc">JP</span>Summer Sonic</li><li><span class="cc">HU</span>Sziget</li></ul></div><div class="mo"><h4>Sep</h4><span class="n">1</span><ul><li><span class="cc">BR</span>Rock in Rio</li></ul></div><div class="mo"><h4>Oct</h4><span class="n">1</span><ul><li><span class="cc">US</span>Austin City Limits Music Festival</li></ul></div><div class="mo"><h4>Nov</h4><span class="n">2</span><ul><li><span class="cc">US</span>EDC Orlando</li><li><span class="cc">UG</span>Nyege Nyege</li></ul></div><div class="mo"><h4>Dec</h4><span class="n">1</span><ul><li><span class="cc">SA</span>MDLBEAST Soundstorm</li></ul></div></div></div></div>
+
+<h3 id="the-festival-decoder">The festival decoder</h3>
+<p>Search by what you saw on a ticket page, a poster or your own wrist and jump to the explanation.</p>
+<div class="mod wide" id="lookup-tool"><div class="mod-head"><div class="kicker">Festival decoder</div><h3>145 things you might run into</h3></div><div class="mod-body"><div class="lk-tools"><label class="field" for="lk-q">What did you see, hear or get charged for?<input id="lk-q" type="search" placeholder="Try: radius clause, tier 2, chip in my wristband, the pit" autocomplete="off"></label><span class="count" id="lk-count"></span></div><ul class="lk-list" id="lk-list"></ul><button class="btn ghost" id="lk-more" type="button" style="margin-top:.8rem" hidden>Show more</button></div></div>
+
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=The%20Wristband%20correction%3A%20The%20festival%20finder">Report an error in this section</a></p></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/"><span>Back to</span>The Wristband</a><a class="next" href="/history/"><span>Next · 02</span>A short history of the music festival</a></nav><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://polo.cold.fyi">Polo</a> <span>- how Coachella actually works, down to the billboards</span></li><li><a href="https://tickets.cold.fyi">Tickets</a> <span>- how a concert ticket travels from artist to fan, and where the fees go</span></li><li><a href="https://noise.cold.fyi">The Noise</a> <span>- deep dive No. 6, every sound in a city and how loud it really is</span></li><li><a href="https://school.darkroom.ad">Darkroom Ad School</a> <span>- free lessons on selling out a room with Meta ads</span></li><li><a href="https://airwaves.cold.fyi">The Airwaves</a> <span>- deep dive No. 5, every radio signal over a city</span></li><li><a href="https://streetcode.cold.fyi">Street Code</a> <span>- deep dive No. 4, every mark, box and cap on the street</span></li><li><a href="https://works.cold.fyi">How a City Works</a> <span>- deep dive No. 3, the systems behind the sirens, trains and trucks</span></li><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li></ul></aside><footer><span>made with &lt;3 in boston · Independent. Not affiliated with any festival.</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/finder/" class=on><span class="n">01</span>The festival finder</a><a href="/history/"><span class="n">02</span>A short history of the music festival</a><a href="/owners/"><span class="n">03</span>Who owns the festivals</a><a href="/money/"><span class="n">04</span>Where the money goes</a><a href="/lineup/"><span class="n">05</span>How a lineup gets made</a><a href="/selling/"><span class="n">06</span>How festivals sell out</a><a href="/build/"><span class="n">07</span>Building a city in a field</a><a href="/safety/"><span class="n">08</span>Crowds, heat and keeping people safe</a><a href="/wristbands/"><span class="n">09</span>Wristbands, cashless and the gate</a><a href="/camping/"><span class="n">10</span>Camping, getting there and getting home</a><a href="/impact/"><span class="n">11</span>Waste, carbon and the town next door</a><a href="/season/"><span class="n">12</span>The global festival season</a><a href="/new-england/"><span class="n">13</span>New England: from Newport to Boston Calling</a><a href="/quiz/"><span class="n">14</span>Test yourself</a><a href="/glossary/"><span class="n">15</span>The glossary</a><a href="/next/"><span class="n">16</span>Where to go next</a><a href="/open/"><span class="n">17</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">18</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script id="lk-data" type="application/json">[{"see": "Which festival was first?", "is": "Newport Jazz 1954 usually gets the credit, though Los Angeles had an annual jazz event from 1945.", "section": "history", "anchor": "Where did the music festival start?", "tags": ["first", "oldest", "newport", "jazz"], "c": "yel", "sid": "where-did-the-music-festival-start"}, {"see": "Did people really boo Dylan at Newport?", "is": "Accounts differ; Wikipedia says a small number of purists booed and most reaction was enthusiastic.", "section": "history", "anchor": "What happened when Dylan went electric at Newport?", "tags": ["dylan", "newport folk", "1965", "electric"], "c": "yel", "sid": "what-happened-when-dylan-went-electric-at-newport"}, {"see": "Who runs Newport Folk and Jazz?", "is": "The non-profit Newport Festivals Foundation, since 2011.", "section": "history", "anchor": "In New England: what Newport looks like now", "tags": ["newport", "non-profit", "foundation", "fort adams"], "c": "yel", "sid": "in-new-england-what-newport-looks-like-now"}, {"see": "How was Woodstock free if it had tickets?", "is": "The fences and ticket booths were not finished by opening day, so it became a free concert.", "section": "history", "anchor": "How many people went to Woodstock, and did it lose money?", "tags": ["woodstock", "tickets", "free", "1969"], "c": "yel", "sid": "how-many-people-went-to-woodstock-and-did-it-lose-money"}, {"see": "What went wrong at Altamont?", "is": "A free concert in December 1969 where four people died, one of them stabbed near the stage.", "section": "history", "anchor": "What happened at Altamont?", "tags": ["altamont", "rolling stones", "1969", "hells angels"], "c": "yel", "sid": "what-happened-at-altamont"}, {"see": "Why is there no Glastonbury this year?", "is": "Glastonbury takes planned fallow years to rest the farm; 2026 is one.", "section": "history", "anchor": "Why does Glastonbury take a year off?", "tags": ["glastonbury", "fallow", "2026", "year off"], "c": "yel", "sid": "why-does-glastonbury-take-a-year-off"}, {"see": "Why is Glastonbury's main stage a pyramid?", "is": "The first Pyramid Stage went up in 1971.", "section": "history", "anchor": "How did Britain end up with the camping festival?", "tags": ["pyramid stage", "glastonbury", "1971", "stage"], "c": "yel", "sid": "how-did-britain-end-up-with-the-camping-festival"}, {"see": "Lollapalooza used to tour?", "is": "Yes, from 1991 to 1997, before settling in Chicago in 2005.", "section": "history", "anchor": "What was the touring festival?", "tags": ["lollapalooza", "tour", "1991", "chicago"], "c": "yel", "sid": "what-was-the-touring-festival"}, {"see": "Why is EDC in Las Vegas and not LA?", "is": "After a 2010 death, the LA Coliseum capped capacity at 75,000 a day and EDC moved in 2011.", "section": "history", "anchor": "Why is EDC in Las Vegas?", "tags": ["edc", "las vegas", "insomniac", "coliseum"], "c": "yel", "sid": "why-is-edc-in-las-vegas"}, {"see": "What happened to SFX?", "is": "It bought up dance promoters, went public in 2013 and filed for bankruptcy in 2016.", "section": "history", "anchor": "What happened during the EDM boom?", "tags": ["sfx", "edm", "bankruptcy", "livestyle"], "c": "yel", "sid": "what-happened-during-the-edm-boom"}, {"see": "Is there a festival on a cruise ship?", "is": "Yes; music cruises such as Jam Cruise and Holy Ship! put the festival on a ship.", "section": "history", "anchor": "What kinds of festival are there?", "tags": ["cruise", "holy ship", "jam cruise", "boat"], "c": "yel", "sid": "what-kinds-of-festival-are-there"}, {"see": "What is the difference between a camping and a city festival?", "is": "Greenfield festivals build on open land with camping; urban ones use a park and sell by the day.", "section": "history", "anchor": "What kinds of festival are there?", "tags": ["greenfield", "camping", "urban", "day ticket"], "c": "yel", "sid": "what-kinds-of-festival-are-there"}, {"see": "Why are so many UK festivals cancelling?", "is": "AIF counted a record 78 losses in 2024 and blames costs; it wants a VAT cut on tickets.", "section": "history", "anchor": "Why are so many festivals being canceled?", "tags": ["canceled", "uk", "aif", "vat"], "c": "yel", "sid": "why-are-so-many-festivals-being-canceled"}, {"see": "Why did Pitchfork Fest end?", "is": "Its Chicago run ended in 2024; supporters blamed owner budget cuts, others a struggling market.", "section": "history", "anchor": "Why are so many festivals being canceled?", "tags": ["pitchfork", "chicago", "2024", "closure"], "c": "yel", "sid": "why-are-so-many-festivals-being-canceled"}, {"see": "When did festivals come back after Covid?", "is": "US festivals returned in the second half of 2021; Glastonbury and Roskilde in 2022.", "section": "history", "anchor": "What happened to festivals during Covid?", "tags": ["covid", "pandemic", "2020", "2021"], "c": "yel", "sid": "what-happened-to-festivals-during-covid"}, {"see": "Who actually owns this festival", "is": "Often a big promoter holding a controlling stake, with the founder still running it.", "section": "owners", "anchor": "What does ownership change for a festivalgoer?", "tags": ["owner", "promoter", "consolidation", "founder"], "c": "pur", "sid": "what-does-ownership-change-for-a-festivalgoer"}, {"see": "Is Lollapalooza a Live Nation festival", "is": "Yes, through a reported 51% stake in C3 Presents bought in 2014.", "section": "owners", "anchor": "How did Live Nation end up with Lollapalooza?", "tags": ["lollapalooza", "live nation", "c3", "chicago"], "c": "pur", "sid": "how-did-live-nation-end-up-with-lollapalooza"}, {"see": "Who runs Coachella", "is": "Goldenvoice, part of AEG Presents.", "section": "owners", "anchor": "Who owns Coachella?", "tags": ["coachella", "aeg", "goldenvoice", "owner"], "c": "pur", "sid": "who-owns-coachella"}, {"see": "Who owns EDC", "is": "Insomniac, which formed a partnership with Live Nation in 2013.", "section": "owners", "anchor": "How did Live Nation end up with Lollapalooza?", "tags": ["edc", "insomniac", "live nation", "rave"], "c": "pur", "sid": "how-did-live-nation-end-up-with-lollapalooza"}, {"see": "A European festival I like is owned by KKR", "is": "KKR bought Superstruct, which runs more than 80 festivals, in 2024.", "section": "owners", "anchor": "What did KKR buy when it bought Superstruct?", "tags": ["kkr", "superstruct", "private equity", "europe"], "c": "pur", "sid": "what-did-kkr-buy-when-it-bought-superstruct"}, {"see": "My German festival tickets came from Eventim", "is": "CTS Eventim owns both ticketing and festivals such as Rock am Ring and Hurricane.", "section": "owners", "anchor": "Where does CTS Eventim fit?", "tags": ["eventim", "rock am ring", "hurricane", "germany", "ticketing"], "c": "pur", "sid": "where-does-cts-eventim-fit"}, {"see": "Is Glastonbury corporate now", "is": "It is family-owned; Neil Young has argued its BBC partnership amounts to corporate control.", "section": "owners", "anchor": "Which festivals are still independent?", "tags": ["glastonbury", "independent", "eavis", "bbc"], "c": "pur", "sid": "which-festivals-are-still-independent"}, {"see": "Who owns Boston Calling", "is": "MSG bought a controlling interest in 2016; by 2023 it was a Live Nation subsidiary, per the Boston Globe.", "section": "owners", "anchor": "In New England", "tags": ["boston calling", "boston", "msg", "allston"], "c": "pur", "sid": "in-new-england"}, {"see": "There are brand logos on every stage", "is": "Sponsorship is a major festival revenue line, often sold across several festivals at once.", "section": "money", "anchor": "Where does a festival's money come from?", "tags": ["sponsor", "brand", "activation", "stage"], "c": "grn", "sid": "where-does-a-festival-s-money-come-from"}, {"see": "Why is there a service charge on my ticket", "is": "Ticket service charges are listed as festival revenue by Live Nation.", "section": "money", "anchor": "Where does a festival's money come from?", "tags": ["fees", "service charge", "ticket", "revenue"], "c": "grn", "sid": "where-does-a-festival-s-money-come-from"}, {"see": "How much does Coachella make", "is": "The last public gross was $114.6 million in 2017, per Billboard.", "section": "money", "anchor": "How much money does Coachella make?", "tags": ["coachella", "gross", "revenue", "billboard"], "c": "grn", "sid": "how-much-money-does-coachella-make"}, {"see": "Does Glastonbury make money", "is": "Yes: £5.9 million profit on £68.4 million revenue in 2024.", "section": "money", "anchor": "Does Glastonbury make a profit?", "tags": ["glastonbury", "profit", "accounts", "fallow year"], "c": "grn", "sid": "does-glastonbury-make-a-profit"}, {"see": "How much was the headliner paid", "is": "Rarely disclosed; Coachella 2017 headliners reportedly got $3-4 million each.", "section": "money", "anchor": "How much do festival headliners get paid?", "tags": ["headliner", "fee", "pay", "guarantee"], "c": "grn", "sid": "how-much-do-festival-headliners-get-paid"}, {"see": "Why isn't my favorite act playing a club show near the festival", "is": "A radius clause may bar it from playing nearby for months around the festival.", "section": "money", "anchor": "What is a radius clause?", "tags": ["radius clause", "exclusivity", "club show", "contract"], "c": "grn", "sid": "what-is-a-radius-clause"}, {"see": "Coachella was sued over its radius clause", "is": "Portland's Soul'd Out sued in 2018; the Ninth Circuit revived the case in 2020.", "section": "money", "anchor": "What happened in the Soul'd Out case?", "tags": ["soul'd out", "coachella", "lawsuit", "antitrust"], "c": "grn", "sid": "what-happened-in-the-soul-d-out-case"}, {"see": "Festivals keep getting canceled", "is": "Rising costs since late 2021 were named in a wave of 2024 US cancellations.", "section": "money", "anchor": "What does a festival spend money on?", "tags": ["canceled", "costs", "cancellation", "2024"], "c": "grn", "sid": "what-does-a-festival-spend-money-on"}, {"see": "Is a festival insured if it rains or is canceled", "is": "Usually yes for listed causes like weather; disease cover has been unavailable since COVID.", "section": "money", "anchor": "Do festivals have cancellation insurance for weather?", "tags": ["insurance", "weather", "cancellation", "covid"], "c": "grn", "sid": "do-festivals-have-cancellation-insurance-for-weather"}, {"see": "What happened at Fyre Festival", "is": "It was a fraud; its founder got six years in federal prison in 2018.", "section": "money", "anchor": "What happened to Fyre Festival?", "tags": ["fyre", "fraud", "mcfarland", "bahamas"], "c": "grn", "sid": "what-happened-to-fyre-festival"}, {"see": "Why did Woodstock 50 never happen", "is": "Its financier, Dentsu Aegis, pulled more than $18 million in April 2019.", "section": "money", "anchor": "What happened to Woodstock 50?", "tags": ["woodstock 50", "dentsu", "canceled", "financing"], "c": "grn", "sid": "what-happened-to-woodstock-50"}, {"see": "What has Astroworld cost Live Nation", "is": "A $186 million charge beyond insurance in Q1 2024, plus settlements of all 10 wrongful-death suits.", "section": "money", "anchor": "What has Astroworld cost?", "tags": ["astroworld", "settlement", "live nation", "houston"], "c": "grn", "sid": "what-has-astroworld-cost"}, {"see": "Why is the headliner's name so big on the poster", "is": "Font size and line position are billing, which signals status and is negotiated by agents.", "section": "lineup", "anchor": "Why are some names bigger on the poster?", "tags": ["poster", "billing", "font", "headliner"], "c": "org", "sid": "why-are-some-names-bigger-on-the-poster"}, {"see": "The lineup is in alphabetical order", "is": "Some festivals list A-Z, or A-Z within font-size tiers, to avoid placement fights.", "section": "lineup", "anchor": "Alphabetical or billing order: the IFF debate", "tags": ["alphabetical", "poster", "lineup", "order"], "c": "org", "sid": "alphabetical-or-billing-order-the-iff-debate"}, {"see": "Roskilde's poster has rows of different sizes", "is": "Roskilde uses 100/90/70/50/40% font tiers, alphabetical within each.", "section": "lineup", "anchor": "How does Roskilde size its poster?", "tags": ["roskilde", "tiers", "font", "poster"], "c": "org", "sid": "how-does-roskilde-size-its-poster"}, {"see": "The poster is a circle or crossword and I can't find anyone", "is": "Some festivals use unranked layouts on purpose so no one argues about order.", "section": "lineup", "anchor": "Why are lineup posters getting harder to read?", "tags": ["poster", "design", "layout", "unranked"], "c": "org", "sid": "why-are-lineup-posters-getting-harder-to-read"}, {"see": "A band skipped my city all year after a festival booking", "is": "Radius clauses bar nearby shows for months around a festival date.", "section": "lineup", "anchor": "What is a radius clause?", "tags": ["radius", "clause", "exclusivity", "booking"], "c": "org", "sid": "what-is-a-radius-clause"}, {"see": "Every festival seems to wait for Coachella's lineup", "is": "Coachella's contracts give it first right to announce in its region.", "section": "lineup", "anchor": "Why does one festival's announcement hold up another's?", "tags": ["coachella", "announcement", "exclusivity", "lineup"], "c": "org", "sid": "why-does-one-festival-s-announcement-hold-up-another-s"}, {"see": "The festival released a separate lineup for each day", "is": "That is the day split, usually out after the main poster.", "section": "lineup", "anchor": "What is a day split?", "tags": ["day split", "daily", "lineup", "single day"], "c": "org", "sid": "what-is-a-day-split"}, {"see": "How far ahead do festivals book headliners", "is": "Often a year or more; some booking for next year starts while this year is still being booked.", "section": "lineup", "anchor": "How far ahead are headliners booked?", "tags": ["headliner", "booking", "timing", "offer"], "c": "org", "sid": "how-far-ahead-are-headliners-booked"}, {"see": "I got a loyalty presale code by text", "is": "Past buyers get the first and cheapest access window.", "section": "selling", "anchor": "What is a loyalty presale, and how do you get one?", "tags": ["presale", "loyalty", "code", "sms"], "c": "pnk", "sid": "what-is-a-loyalty-presale-and-how-do-you-get-one"}, {"see": "The ticket says Tier 1 or early bird", "is": "The cheapest limited tier; the price rises when it sells out.", "section": "selling", "anchor": "What do \"early bird\" and \"Tier 1\" mean?", "tags": ["early bird", "tier", "price", "tickets"], "c": "pnk", "sid": "what-do-early-bird-and-tier-1-mean"}, {"see": "It says sold out but tickets are still on sale", "is": "Often only one tier or pass type sold out.", "section": "selling", "anchor": "What do \"early bird\" and \"Tier 1\" mean?", "tags": ["sold out", "tier", "tickets", "early bird"], "c": "pnk", "sid": "what-do-early-bird-and-tier-1-mean"}, {"see": "Glastonbury wants my photo before I can buy", "is": "Glastonbury tickets are registered to a named, photographed person and are non-transferable.", "section": "selling", "anchor": "How does Glastonbury sell tickets?", "tags": ["glastonbury", "registration", "photo", "deposit"], "c": "pnk", "sid": "how-does-glastonbury-sell-tickets"}, {"see": "I can pay for my festival ticket in installments", "is": "Payment plans take a deposit now and the balance later; check the fees and missed-payment rules.", "section": "selling", "anchor": "How do festival payment plans work?", "tags": ["payment plan", "layaway", "deposit", "installments"], "c": "pnk", "sid": "how-do-festival-payment-plans-work"}, {"see": "Resale tickets cost four times face value", "is": "Without official face-value resale, secondary prices can jump within minutes.", "section": "selling", "anchor": "Resale: face-value exchanges vs. open resale", "tags": ["resale", "scalping", "face value", "touting"], "c": "pnk", "sid": "resale-face-value-exchanges-vs-open-resale"}, {"see": "The festival sold out before announcing anyone", "is": "Strong brands like Newport Folk and Tomorrowland sell out on reputation alone.", "section": "selling", "anchor": "Can a festival sell out before announcing anyone?", "tags": ["sold out", "no lineup", "newport", "brand"], "c": "pnk", "sid": "can-a-festival-sell-out-before-announcing-anyone"}, {"see": "The price changed while I was in the queue", "is": "That would be dynamic pricing; most festivals use pre-set tiers instead.", "section": "selling", "anchor": "Do festivals use dynamic pricing?", "tags": ["dynamic pricing", "queue", "price", "fees"], "c": "pnk", "sid": "do-festivals-use-dynamic-pricing"}, {"see": "The fees showed up at checkout", "is": "In the US, sellers must show the all-in price with mandatory fees up front since May 12, 2025.", "section": "selling", "anchor": "Do festivals use dynamic pricing?", "tags": ["fees", "all-in", "ftc", "checkout"], "c": "pnk", "sid": "do-festivals-use-dynamic-pricing"}, {"see": "Why does the festival post a long recap video", "is": "The aftermovie is year-round marketing for next year's sale.", "section": "selling", "anchor": "How do festivals advertise?", "tags": ["aftermovie", "video", "marketing", "social"], "c": "pnk", "sid": "how-do-festivals-advertise"}, {"see": "The stages go up weeks before the festival", "is": "Big stages can take nearly three months to build; Glastonbury's phone masts arrive in mid-May.", "section": "build", "anchor": "How long does it take to build a festival?", "tags": ["build", "load-in", "construction", "stages"], "c": "blu", "sid": "how-long-does-it-take-to-build-a-festival"}, {"see": "What is the Purple Guide", "is": "The UK's industry safety guide for outdoor events, published by the Events Industry Forum; guidance, not law.", "section": "build", "anchor": "What is the Purple Guide?", "tags": ["purple guide", "uk", "safety", "guidance"], "c": "blu", "sid": "what-is-the-purple-guide"}, {"see": "The toilet lines are always worse for women", "is": "UK guidance plans five times as many toilets per woman as per man, before urinals.", "section": "build", "anchor": "How many toilets does a festival need?", "tags": ["toilets", "ratio", "sanitation", "queues"], "c": "blu", "sid": "how-many-toilets-does-a-festival-need"}, {"see": "The water refill line is huge", "is": "Supply is half the job; tap numbers and placement are the other half, as Boston Calling found in 2024.", "section": "build", "anchor": "Where does a festival's drinking water come from?", "tags": ["water", "refill", "hydration", "stations"], "c": "blu", "sid": "where-does-a-festival-s-drinking-water-come-from"}, {"see": "I can hear generators everywhere", "is": "Most festival power is generators, increasingly running on HVO renewable diesel.", "section": "build", "anchor": "What powers a festival?", "tags": ["power", "generators", "hvo", "fuel"], "c": "blu", "sid": "what-powers-a-festival"}, {"see": "Why is there a fenced gap in front of the stage", "is": "That is the pit, where stewards and medics work behind a load-bearing barrier.", "section": "build", "anchor": "Why is there a gap between the crowd and the stage?", "tags": ["pit", "barrier", "front", "stage"], "c": "blu", "sid": "why-is-there-a-gap-between-the-crowd-and-the-stage"}, {"see": "There are fences splitting the crowd into sections", "is": "Finger barriers and zoned pits divide big crowds into pens to stop surges building.", "section": "build", "anchor": "Why is there a gap between the crowd and the stage?", "tags": ["zoned pit", "finger barrier", "pens", "crowd"], "c": "blu", "sid": "why-is-there-a-gap-between-the-crowd-and-the-stage"}, {"see": "Does a festival need a license", "is": "Yes; UK councils license under the Licensing Act 2003, and US permits are local.", "section": "build", "anchor": "Does a festival need a license?", "tags": ["license", "permit", "council", "law"], "c": "blu", "sid": "does-a-festival-need-a-license"}, {"see": "The crowd up front is so packed I can't move", "is": "Above about 5 people per square meter, people lose control of their movement.", "section": "safety", "anchor": "How many people per square meter is dangerous?", "tags": ["density", "crush", "crowd", "square meter"], "c": "red", "sid": "how-many-people-per-square-meter-is-dangerous"}, {"see": "What happened at Astroworld", "is": "Ten people died of compression asphyxiation on Nov. 5, 2021; no one was indicted.", "section": "safety", "anchor": "What happened at Astroworld in 2021?", "tags": ["astroworld", "houston", "crush", "travis scott"], "c": "red", "sid": "what-happened-at-astroworld-in-2021"}, {"see": "What happened at Roskilde with Pearl Jam", "is": "Nine young men died in a crush at the Orange Stage on June 30, 2000.", "section": "safety", "anchor": "What happened at Roskilde in 2000?", "tags": ["roskilde", "pearl jam", "denmark", "crush"], "c": "red", "sid": "what-happened-at-roskilde-in-2000"}, {"see": "What was the Love Parade disaster", "is": "21 people died in a crush at the Duisburg event in 2010; the trial ended without a verdict.", "section": "safety", "anchor": "What happened at the Love Parade in 2010?", "tags": ["love parade", "duisburg", "germany", "crush"], "c": "red", "sid": "what-happened-at-the-love-parade-in-2010"}, {"see": "The show stopped because of wind", "is": "Wind is the big risk to temporary stages; events set wind limits and stop the show when they are reached.", "section": "safety", "anchor": "What happens when the weather turns?", "tags": ["wind", "weather", "show stop", "stage"], "c": "red", "sid": "what-happens-when-the-weather-turns"}, {"see": "Why did a stage fall down in Indiana", "is": "The roof failed in wind below its code minimum and its ballast was grossly inadequate.", "section": "safety", "anchor": "Why did the Indiana State Fair stage collapse?", "tags": ["indiana", "stage collapse", "ballast", "wind"], "c": "red", "sid": "why-did-the-indiana-state-fair-stage-collapse"}, {"see": "How many people go to the medical tent", "is": "About 13 in every 1,000 at Glastonbury 2022, mostly for joints, stomach trouble and blisters.", "section": "safety", "anchor": "How many people end up in the medical tent?", "tags": ["medical", "first aid", "ems", "hospital"], "c": "red", "sid": "how-many-people-end-up-in-the-medical-tent"}, {"see": "They told us to shelter in place", "is": "It means stay where you are rather than try to leave, as at Burning Man in 2023.", "section": "safety", "anchor": "What happens when the weather turns?", "tags": ["shelter in place", "rain", "mud", "burning man"], "c": "red", "sid": "what-happens-when-the-weather-turns"}, {"see": "Why is free water such a big deal", "is": "Woodstock '99's $4 bottles in extreme heat made it a safety issue; UK guidance requires drinking water on site.", "section": "safety", "anchor": "What did Woodstock '99 teach festivals about heat?", "tags": ["heat", "water", "woodstock", "dehydration"], "c": "red", "sid": "what-did-woodstock-99-teach-festivals-about-heat"}, {"see": "Why can't I bring my backpack", "is": "Bag rules tightened after 2017 and change by year; check the current official FAQ.", "section": "safety", "anchor": "What can I bring, and why are bag rules so strict?", "tags": ["bags", "security", "clear bag", "banned items"], "c": "red", "sid": "what-can-i-bring-and-why-are-bag-rules-so-strict"}, {"see": "There's a drug checking tent at the festival", "is": "Licensed drug checking runs at some UK festivals; rules differ by country and state.", "section": "safety", "anchor": "Is drug checking legal at festivals?", "tags": ["drug checking", "pill testing", "the loop", "harm reduction"], "c": "red", "sid": "is-drug-checking-legal-at-festivals"}, {"see": "What is DanceSafe", "is": "A US nonprofit, founded 1998, that runs harm reduction booths with information, water and earplugs.", "section": "safety", "anchor": "Is drug checking legal at festivals?", "tags": ["dancesafe", "harm reduction", "us", "booth"], "c": "red", "sid": "is-drug-checking-legal-at-festivals"}, {"see": "My wristband has a chip in it", "is": "An RFID chip carrying an ID number the festival looks up at each scan.", "section": "wristbands", "anchor": "What is actually inside a festival wristband?", "tags": ["rfid", "nfc", "chip", "wristband"], "c": "org", "sid": "what-is-actually-inside-a-festival-wristband"}, {"see": "Is my wristband tracking me", "is": "Vendors say no GPS and no tracking between scanners; it logs each gate scan and purchase.", "section": "wristbands", "anchor": "Do festival wristbands track your location?", "tags": ["tracking", "gps", "privacy", "wristband"], "c": "org", "sid": "do-festival-wristbands-track-your-location"}, {"see": "The festival keeps telling me to activate my wristband", "is": "Registering links the band to you so a lost band can be frozen and its balance moved.", "section": "wristbands", "anchor": "How do I activate my festival wristband, and why bother?", "tags": ["activate", "register", "lost", "wristband"], "c": "org", "sid": "how-do-i-activate-my-festival-wristband-and-why-bother"}, {"see": "I can't get in again after leaving", "is": "Anti-passback: the gate needs an exit scan before it lets the band back in.", "section": "wristbands", "anchor": "How do I activate my festival wristband, and why bother?", "tags": ["re-entry", "exit scan", "gate", "anti-passback"], "c": "org", "sid": "how-do-i-activate-my-festival-wristband-and-why-bother"}, {"see": "My wristband won't come off or loosen", "is": "It uses a one-way lock: tighter only, and cutting it voids it.", "section": "wristbands", "anchor": "Why are some festival wristbands impossible to take off?", "tags": ["lock", "tight", "remove", "wristband"], "c": "org", "sid": "why-are-some-festival-wristbands-impossible-to-take-off"}, {"see": "I cut my wristband by accident", "is": "Go to the box office with photo ID; replacements may cost a fee.", "section": "wristbands", "anchor": "What happens if I cut my festival wristband?", "tags": ["cut", "replacement", "fee", "broken"], "c": "org", "sid": "what-happens-if-i-cut-my-festival-wristband"}, {"see": "Someone outside is selling wristbands cheap", "is": "Counterfeits fail the chip scan and get confiscated; arrests have followed at EDC and Ultra.", "section": "wristbands", "anchor": "How to spot a fake festival wristband (and who gets caught selling them)", "tags": ["fake", "counterfeit", "scalper", "resale"], "c": "org", "sid": "how-to-spot-a-fake-festival-wristband-and-who-gets-caught-selling-them"}, {"see": "The bar only takes my wristband", "is": "A cashless system: a linked card or a festival-only balance on the chip.", "section": "wristbands", "anchor": "How does cashless payment work at a festival?", "tags": ["cashless", "payment", "bar", "top-up"], "c": "org", "sid": "how-does-cashless-payment-work-at-a-festival"}, {"see": "I have money left on my wristband", "is": "Request a refund online inside the window; there is usually a small fee.", "section": "wristbands", "anchor": "How do I get a refund of my cashless festival balance?", "tags": ["refund", "balance", "cashless", "deadline"], "c": "org", "sid": "how-do-i-get-a-refund-of-my-cashless-festival-balance"}, {"see": "I missed the cashless refund deadline", "is": "The leftover credit is usually lost.", "section": "wristbands", "anchor": "What happens to money left on a festival wristband?", "tags": ["refund", "deadline", "lost money", "breakage"], "c": "org", "sid": "what-happens-to-money-left-on-a-festival-wristband"}, {"see": "My bag is too big for the gate", "is": "Bag sizes are set per festival; Boston Calling's 2023 limit was 6 x 9 inches.", "section": "wristbands", "anchor": "What happens at the festival gate?", "tags": ["bag", "size", "search", "gate"], "c": "org", "sid": "what-happens-at-the-festival-gate"}, {"see": "There's no phone signal at the festival", "is": "A city-sized crowd swamps the local towers; carriers bring cells on wheels.", "section": "wristbands", "anchor": "Why is there no phone signal at festivals?", "tags": ["signal", "cell", "cow", "data"], "c": "org", "sid": "why-is-there-no-phone-signal-at-festivals"}, {"see": "A truck with a tower on it parked by the field", "is": "A COW, or cell on wheels: a portable cell tower.", "section": "wristbands", "anchor": "Why is there no phone signal at festivals?", "tags": ["cow", "cell tower", "truck", "signal"], "c": "org", "sid": "why-is-there-no-phone-signal-at-festivals"}, {"see": "Fields full of left-behind tents", "is": "About 250,000 a year are abandoned at UK festivals, per the AIF estimate.", "section": "camping", "anchor": "What happens to tents left at festivals?", "tags": ["tents", "waste", "camping", "abandoned"], "c": "grn", "sid": "what-happens-to-tents-left-at-festivals"}, {"see": "Love the farm, leave no trace", "is": "Glastonbury's slogan; it reports 99% of tents taken home.", "section": "camping", "anchor": "How did Glastonbury get 99% of tents taken home?", "tags": ["glastonbury", "tents", "slogan", "leave no trace"], "c": "grn", "sid": "how-did-glastonbury-get-99-of-tents-taken-home"}, {"see": "A free bus from the train station", "is": "A ticket-holder shuttle, like Glastonbury's from Castle Cary.", "section": "camping", "anchor": "How do I get to Glastonbury by train?", "tags": ["shuttle", "train", "transport", "glastonbury"], "c": "grn", "sid": "how-do-i-get-to-glastonbury-by-train"}, {"see": "My ears are ringing after the festival", "is": "Likely a temporary threshold shift; earplugs cut it sharply in a 2016 trial.", "section": "camping", "anchor": "Do earplugs really work at concerts?", "tags": ["earplugs", "hearing", "tinnitus", "noise"], "c": "grn", "sid": "do-earplugs-really-work-at-concerts"}, {"see": "Only empty water bottles allowed", "is": "Rules allow sealed or empty bottles so you can use free refill points.", "section": "camping", "anchor": "Can I bring a water bottle to a music festival?", "tags": ["water", "bottle", "refill", "heat"], "c": "grn", "sid": "can-i-bring-a-water-bottle-to-a-music-festival"}, {"see": "Raised platform by the stage for wheelchair users", "is": "An accessible viewing platform; companion limits vary by festival.", "section": "camping", "anchor": "How does accessibility work at music festivals?", "tags": ["accessibility", "ada", "viewing platform", "companion"], "c": "grn", "sid": "how-does-accessibility-work-at-music-festivals"}, {"see": "The ticket was the cheap part", "is": "All-in US trips were estimated at $800-$3,000 in 2024.", "section": "camping", "anchor": "How much does it cost to go to a music festival?", "tags": ["cost", "budget", "price", "travel"], "c": "grn", "sid": "how-much-does-it-cost-to-go-to-a-music-festival"}, {"see": "Is most of a festival's carbon from people driving and flying there", "is": "Usually the largest share: up to 80% (2015 UK report) or 41% on average (2023 study).", "section": "impact", "anchor": "Is audience travel really 80% of festival emissions?", "tags": ["carbon", "travel", "emissions", "footprint"], "c": "grn", "sid": "is-audience-travel-really-80-of-festival-emissions"}, {"see": "How much carbon do UK festivals put out", "is": "About 100,000 tonnes CO2e a year including travel (2015 estimate).", "section": "impact", "anchor": "How big is a festival's carbon footprint?", "tags": ["carbon", "co2", "uk", "benchmark"], "c": "grn", "sid": "how-big-is-a-festival-s-carbon-footprint"}, {"see": "The generators say they run on HVO", "is": "A renewable diesel from waste oils; savings claims range from up to 90% to about half.", "section": "impact", "anchor": "What is HVO, and why are festivals switching to it?", "tags": ["hvo", "generators", "diesel", "fuel", "power"], "c": "grn", "sid": "what-is-hvo-and-why-are-festivals-switching-to-it"}, {"see": "I can't buy a bottle of water at Glastonbury", "is": "Single-use plastic bottles have not been sold since 2019; cans and free taps instead.", "section": "impact", "anchor": "Why did Glastonbury stop selling plastic bottles?", "tags": ["plastic", "bottles", "water", "glastonbury"], "c": "grn", "sid": "why-did-glastonbury-stop-selling-plastic-bottles"}, {"see": "I paid extra for my beer cup at Roskilde", "is": "It is a 5 DKK cup deposit; return a cup and get 1 DKK back.", "section": "impact", "anchor": "How do reusable cups work at Roskilde?", "tags": ["cups", "deposit", "roskilde", "reusable"], "c": "grn", "sid": "how-do-reusable-cups-work-at-roskilde"}, {"see": "Can I leave my cheap tent behind", "is": "Please don't: an estimated 250,000 tents a year are left at UK festivals, mostly landfilled.", "section": "impact", "anchor": "What happens to tents left at festivals?", "tags": ["tents", "camping", "waste", "landfill"], "c": "grn", "sid": "what-happens-to-tents-left-at-festivals"}, {"see": "Glastonbury isn't on this year", "is": "Fallow years rest the farmland; 2026 was one.", "section": "impact", "anchor": "Why does Glastonbury take a year off?", "tags": ["fallow", "glastonbury", "2026", "farm"], "c": "grn", "sid": "why-does-glastonbury-take-a-year-off"}, {"see": "The festival says it brought millions to town", "is": "Commissioned impact studies; methods differ, so figures aren't comparable.", "section": "impact", "anchor": "How much money does a festival bring to a town?", "tags": ["economic", "impact", "study", "money"], "c": "grn", "sid": "how-much-money-does-a-festival-bring-to-a-town"}, {"see": "Locals are renting their yards near Coachella", "is": "Indio regulates short-term rentals with permits, taxes and quiet hours.", "section": "impact", "anchor": "Can you rent your house out during a festival?", "tags": ["indio", "rental", "housing", "coachella"], "c": "grn", "sid": "can-you-rent-your-house-out-during-a-festival"}, {"see": "I can hear the bass from my apartment miles away", "is": "Low frequencies travel farthest; UK targets come from the 1995 Pop Code.", "section": "impact", "anchor": "How loud can a festival be near homes?", "tags": ["noise", "bass", "neighbors", "curfew", "decibels"], "c": "grn", "sid": "how-loud-can-a-festival-be-near-homes"}, {"see": "The music stops at 11pm", "is": "The UK Pop Code covers events between 9am and 11pm; local licenses set curfews.", "section": "impact", "anchor": "How loud can a festival be near homes?", "tags": ["curfew", "11pm", "noise", "license"], "c": "grn", "sid": "how-loud-can-a-festival-be-near-homes"}, {"see": "Why was Woodstock 50 canceled", "is": "The Town of Vernon denied its permit and rejected the appeal in July 2019.", "section": "impact", "anchor": "Who decides whether a festival can happen?", "tags": ["woodstock", "permit", "canceled", "town"], "c": "grn", "sid": "who-decides-whether-a-festival-can-happen"}, {"see": "What happened at Electric Zoo 2023", "is": "Day one canceled over missing permits; Sunday gate rush after reported overselling.", "section": "impact", "anchor": "Who decides whether a festival can happen?", "tags": ["electric zoo", "permits", "oversold", "new york"], "c": "grn", "sid": "who-decides-whether-a-festival-can-happen"}, {"see": "What is the Brockwell Park court case", "is": "Residents won a 2025 High Court ruling over Lambeth's use of the 28-day rule.", "section": "impact", "anchor": "Who decides whether a festival can happen?", "tags": ["brockwell", "court", "lambeth", "london", "park"], "c": "grn", "sid": "who-decides-whether-a-festival-can-happen"}, {"see": "Can I get into a festival free by volunteering", "is": "Yes, via charities like Oxfam: three shifts, a refundable deposit, free entry.", "section": "impact", "anchor": "How do you volunteer at a festival for free?", "tags": ["volunteer", "free", "oxfam", "stewarding"], "c": "grn", "sid": "how-do-you-volunteer-at-a-festival-for-free"}, {"see": "Is Roskilde a charity", "is": "Yes, a nonprofit that has donated 457 million DKK since 1972 (2026).", "section": "impact", "anchor": "How do you volunteer at a festival for free?", "tags": ["roskilde", "nonprofit", "charity", "volunteers"], "c": "grn", "sid": "how-do-you-volunteer-at-a-festival-for-free"}, {"see": "Boston Calling was loud in Cambridge", "is": "2017 sound bleed from Allston; the 2018 fix cut complaints nearly in half.", "section": "impact", "anchor": "In New England", "tags": ["boston calling", "cambridge", "noise", "allston"], "c": "grn", "sid": "in-new-england"}, {"see": "Is Newport Folk sustainable", "is": "Rhode Island's governor recognized it in 2023 for cutting single-use plastics.", "section": "impact", "anchor": "In New England", "tags": ["newport", "sustainability", "rhode island", "plastic"], "c": "grn", "sid": "in-new-england"}, {"see": "When is festival season", "is": "A relay: the Southern Hemisphere in January to March, the US in spring, Europe June to August, Rio and the Gulf in September and December.", "section": "season", "anchor": "When is festival season, really?", "tags": ["season", "calendar", "months", "summer", "hemisphere"], "c": "blu", "sid": "when-is-festival-season-really"}, {"see": "What festivals are on in July", "is": "July is Europe's busiest month: Exit, Mad Cool, Awakenings, FIB, Tomorrowland and Fuji Rock in recent years.", "section": "season", "anchor": "The season month by month", "tags": ["july", "calendar", "europe", "dates"], "c": "blu", "sid": "the-season-month-by-month"}, {"see": "Why is there no Glastonbury this year", "is": "2026 is a planned fallow year; the farm rests roughly every five years.", "section": "season", "anchor": "Why is there no Glastonbury in 2026?", "tags": ["glastonbury", "fallow", "2026", "uk"], "c": "blu", "sid": "why-is-there-no-glastonbury-in-2026"}, {"see": "Did Tomorrowland happen after the fire", "is": "Yes - the main stage burned on July 16, 2025, and both weekends went ahead.", "section": "season", "anchor": "What happened to the Tomorrowland main stage in 2025?", "tags": ["tomorrowland", "fire", "belgium", "2025"], "c": "blu", "sid": "what-happened-to-the-tomorrowland-main-stage-in-2025"}, {"see": "Why does Tomorrowland have two weekends", "is": "To double the crowd to 400,000 without enlarging the site.", "section": "season", "anchor": "What happened to the Tomorrowland main stage in 2025?", "tags": ["tomorrowland", "weekends", "capacity", "tickets"], "c": "blu", "sid": "what-happened-to-the-tomorrowland-main-stage-in-2025"}, {"see": "Exit Festival left Serbia", "is": "Organizers cited financial and political pressure after backing student protests.", "section": "season", "anchor": "Why did Exit leave Serbia?", "tags": ["exit", "serbia", "novi sad", "politics"], "c": "blu", "sid": "why-did-exit-leave-serbia"}, {"see": "How big is Fuji Rock", "is": "122,000 over four days in 2025, about 10% bought from abroad.", "section": "season", "anchor": "Japan and Asia: how big is Fuji Rock?", "tags": ["fuji rock", "japan", "attendance", "asia"], "c": "blu", "sid": "japan-and-asia-how-big-is-fuji-rock"}, {"see": "Splendour in the Grass canceled again", "is": "Skipped 2024 and 2025 amid rising costs and a headliner shortage; its site went up for sale.", "section": "season", "anchor": "Oceania: why was Splendour in the Grass canceled?", "tags": ["splendour", "australia", "canceled", "costs"], "c": "blu", "sid": "oceania-why-was-splendour-in-the-grass-canceled"}, {"see": "The same lineup is playing every Australian city", "is": "That is the touring circuit model Laneway uses.", "section": "season", "anchor": "Oceania: why was Splendour in the Grass canceled?", "tags": ["laneway", "touring", "australia", "circuit"], "c": "blu", "sid": "oceania-why-was-splendour-in-the-grass-canceled"}, {"see": "Biggest festival in South America", "is": "Rock in Rio, with over 11.2 million cumulative attendees since 1985 (reported).", "section": "season", "anchor": "Latin America: Rock in Rio and the Lollapalooza circuit", "tags": ["rock in rio", "brazil", "lollapalooza", "latin america"], "c": "blu", "sid": "latin-america-rock-in-rio-and-the-lollapalooza-circuit"}, {"see": "Festivals in Africa", "is": "Afro Nation began in Portugal in 2019; Nyege Nyege in Jinja, Uganda in 2015.", "section": "season", "anchor": "Africa: Afro Nation and Nyege Nyege", "tags": ["africa", "afro nation", "nyege nyege", "uganda"], "c": "blu", "sid": "africa-afro-nation-and-nyege-nyege"}, {"see": "Biggest festival in the Middle East", "is": "MDLBEAST Soundstorm near Riyadh reported 180,000 on day one in 2021.", "section": "season", "anchor": "Middle East: how big is MDLBEAST Soundstorm?", "tags": ["saudi", "soundstorm", "riyadh", "middle east"], "c": "blu", "sid": "middle-east-how-big-is-mdlbeast-soundstorm"}, {"see": "How many people go to EDC", "is": "Over 525,000 across three nights in Las Vegas in 2024 (reported).", "section": "season", "anchor": "The US: EDC, Lollapalooza and the weather", "tags": ["edc", "las vegas", "attendance", "insomniac"], "c": "blu", "sid": "the-us-edc-lollapalooza-and-the-weather"}, {"see": "Bonnaroo got rained out", "is": "Canceled after storms and flooding on June 13, 2025.", "section": "season", "anchor": "Why was Bonnaroo 2025 canceled?", "tags": ["bonnaroo", "weather", "refund", "canceled"], "c": "blu", "sid": "why-was-bonnaroo-2025-canceled"}, {"see": "People say Burning Man is not a festival", "is": "Its own Journal calls it a participatory city, with no official stages or schedule.", "section": "season", "anchor": "Is Burning Man a festival?", "tags": ["burning man", "black rock city", "festival", "participation"], "c": "blu", "sid": "is-burning-man-a-festival"}, {"see": "So many small festivals are closing", "is": "UK independents counted a record 78 losses in 2024 (AIF).", "section": "season", "anchor": "Elsewhere in the world: the 2024-2026 squeeze", "tags": ["closures", "aif", "uk", "costs"], "c": "blu", "sid": "elsewhere-in-the-world-the-2024-2026-squeeze"}, {"see": "Where did outdoor festivals start", "is": "Newport, Rhode Island, in 1954 is the usual answer, though Los Angeles had an annual jazz event from 1945.", "section": "season", "anchor": "In New England", "tags": ["newport", "history", "jazz", "folk"], "c": "blu", "sid": "in-new-england"}, {"see": "Newport Folk sold out and they haven't said who's playing", "is": "It sells blind; 2026 tickets went in seconds before any lineup.", "section": "new-england", "anchor": "Why does Newport Folk sell out before the lineup is announced?", "tags": ["newport", "folk", "sold out", "lineup", "blind sale"], "c": "blu", "sid": "why-does-newport-folk-sell-out-before-the-lineup-is-announced"}, {"see": "Someone famous showed up at Newport Folk unannounced", "is": "Surprise guests are a Newport Folk tradition (Dolly Parton 2019, Joni Mitchell 2022).", "section": "new-england", "anchor": "Why does Newport Folk sell out before the lineup is announced?", "tags": ["surprise guest", "newport", "folk", "unannounced"], "c": "blu", "sid": "why-does-newport-folk-sell-out-before-the-lineup-is-announced"}, {"see": "My Newport Jazz ticket costs $314.15, why the odd cents?", "is": "Official 2026 three-day price; odd cents look like fees folded in, not confirmed.", "section": "new-england", "anchor": "How much did Newport Jazz tickets cost in 2026?", "tags": ["newport", "jazz", "price", "tickets", "fees"], "c": "blu", "sid": "how-much-did-newport-jazz-tickets-cost-in-2026"}, {"see": "Is Newport a company or a charity?", "is": "Both festivals are produced by the Newport Festivals Foundation, a 501(c)(3).", "section": "new-england", "anchor": "Who owns the Newport festivals, and what do they bring Rhode Island?", "tags": ["newport", "nonprofit", "foundation", "owner"], "c": "blu", "sid": "who-owns-the-newport-festivals-and-what-do-they-bring-rhode-island"}, {"see": "Did people really riot at a jazz festival?", "is": "Yes, in 1960: about 200 arrests reported and the National Guard called.", "section": "new-england", "anchor": "What happened at the 1960 Newport Jazz riot?", "tags": ["newport", "riot", "1960", "jazz"], "c": "blu", "sid": "what-happened-at-the-1960-newport-jazz-riot"}, {"see": "Why was Newport Jazz in New York for years?", "is": "After the 1971 fence crash it moved to New York in 1972, returning to Fort Adams in 1981.", "section": "new-england", "anchor": "Why did Newport Jazz move to New York, and how did it come back?", "tags": ["newport", "new york", "1971", "fort adams"], "c": "blu", "sid": "why-did-newport-jazz-move-to-new-york-and-how-did-it-come-back"}, {"see": "Did they really boo Dylan?", "is": "Some did; who and why is still contested, per Wikipedia.", "section": "new-england", "anchor": "When did Newport Folk start, and what really happened when Dylan went electric?", "tags": ["dylan", "electric", "1965", "newport", "folk"], "c": "blu", "sid": "when-did-newport-folk-start-and-what-really-happened-when-dylan-went-electric"}, {"see": "Where did Boston Calling go?", "is": "It skipped 2026 and plans to return June 4-6, 2027.", "section": "new-england", "anchor": "Is Boston Calling coming back?", "tags": ["boston calling", "2026", "2027", "canceled"], "c": "blu", "sid": "is-boston-calling-coming-back"}, {"see": "Boston Calling used to be at City Hall", "is": "It left City Hall Plaza after 2016 for Harvard's athletic fields in Allston.", "section": "new-england", "anchor": "How did Boston Calling start, and why did it leave City Hall Plaza?", "tags": ["boston calling", "city hall plaza", "allston", "harvard"], "c": "blu", "sid": "how-did-boston-calling-start-and-why-did-it-leave-city-hall-plaza"}, {"see": "Is Boston Calling owned by Live Nation?", "is": "By 2023 it was a Live Nation subsidiary, produced by C3 Presents, per the Boston Globe.", "section": "new-england", "anchor": "Who owns Boston Calling?", "tags": ["boston calling", "live nation", "c3", "owner"], "c": "blu", "sid": "who-owns-boston-calling"}, {"see": "I can hear the festival from across the river", "is": "That's sound bleed; Boston Calling's 2017 sound carried into Cambridge.", "section": "new-england", "anchor": "Can you hear Boston Calling from Cambridge?", "tags": ["noise", "cambridge", "sound bleed", "boston calling"], "c": "blu", "sid": "can-you-hear-boston-calling-from-cambridge"}, {"see": "Boston Calling 2024 was way too crowded", "is": "Boston EMS reported about 800 medical encounters; crowd numbers are disputed.", "section": "new-england", "anchor": "What happened at Boston Calling 2024?", "tags": ["boston calling", "2024", "crowding", "ems"], "c": "blu", "sid": "what-happened-at-boston-calling-2024"}, {"see": "Is there a festival in Western Mass?", "is": "Green River in Greenfield and Wilco's Solid Sound at MASS MoCA in North Adams.", "section": "new-england", "anchor": "What other festivals does New England have?", "tags": ["green river", "solid sound", "western mass", "festivals"], "c": "blu", "sid": "what-other-festivals-does-new-england-have"}, {"see": "Do I need a ticket for the Pops on July 4?", "is": "No, the Boston Pops Fireworks Spectacular is free.", "section": "new-england", "anchor": "Is the Boston Pops July 4 concert free?", "tags": ["pops", "july 4", "esplanade", "free"], "c": "blu", "sid": "is-the-boston-pops-july-4-concert-free"}, {"see": "How far ahead do I need a permit for an event in Boston?", "is": "10, 20 or 30 business days depending on tier; over 250 people is Tier 3.", "section": "new-england", "anchor": "In Boston: what permits does an outdoor event need?", "tags": ["permit", "boston", "tier", "event"], "c": "blu", "sid": "in-boston-what-permits-does-an-outdoor-event-need"}, {"see": "Does my Boston event need a safety plan?", "is": "Yes if capacity is 1,500 or more: an Emergency Action Plan filed with OEM.", "section": "new-england", "anchor": "In Boston: what permits does an outdoor event need?", "tags": ["emergency action plan", "1500", "boston", "safety"], "c": "blu", "sid": "in-boston-what-permits-does-an-outdoor-event-need"}, {"see": "Why is a jazz festival called JVC?", "is": "JVC was the title sponsor from 1984 to 2008.", "section": "new-england", "anchor": "How did a jazz weekend in Newport become the template?", "tags": ["jvc", "title sponsor", "newport", "jazz"], "c": "blu", "sid": "how-did-a-jazz-weekend-in-newport-become-the-template"}]</script><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("wb-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (tb) tb.textContent = dark ? "Daylight" : "Lights out";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("wb-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Before 1900": "var(--u-wht)", "1900-1945": "var(--u-red)", "1945-1980": "var(--u-yel)", "1980-2010": "var(--u-blu)", "2010-now": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Before 1900","1900-1945","1945-1980","1980-2010","2010-now"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { History: "var(--u-yel)", Business: "var(--u-pur)", "Lineups and selling": "var(--u-org)", "Production and safety": "var(--u-blu)",
+      "On the ground": "var(--u-grn)", Impact: "var(--u-grn)", "The circuit": "var(--u-pnk)", "New England": "var(--u-blu)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (/^(History)$/.test(d.category) ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* street lookup */
+  (function () {
+    var data = readJSON("lk-data"), list = $("lk-list"); if (!list) return;
+    var q = $("lk-q"), more = $("lk-more"), shown = 24;
+    var onAll = !!document.getElementById("sec-basics");
+    function href(d) { return onAll ? "#" + d.sid : "/" + d.section + "/#" + d.sid; }
+    function score(d, words) {
+      var hay = (d.see + " " + d.is + " " + (d.tags || []).join(" ")).toLowerCase(), s = 0;
+      for (var i = 0; i < words.length; i++) { var w = words[i]; if (hay.indexOf(w) < 0) return -1; if ((d.tags || []).indexOf(w) >= 0) s += 3; if (d.see.toLowerCase().indexOf(w) >= 0) s += 2; s += 1; }
+      return s;
+    }
+    function render() {
+      var words = q.value.trim().toLowerCase().split(/[^a-z0-9]+/).filter(function (w) { return w.length > 1 && ["the","a","an","on","in","of","with","is","and","what","thing","street"].indexOf(w) < 0; });
+      var rows = data.map(function (d) { return { d: d, s: words.length ? score(d, words) : 0 }; }).filter(function (r) { return r.s >= 0; });
+      if (words.length) rows.sort(function (a, b) { return b.s - a.s; });
+      $("lk-count").textContent = rows.length + " of " + data.length + " things";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try one plain word: a color, a shape or a place ("blue", "triangle", "pole").</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown); more.hidden = all <= shown; more.textContent = "Show more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (r) { var d = r.d;
+        return '<li><a href="' + esc(href(d)) + '" style="--lc:var(--u-' + esc(d.c) + ')"><span class="see">' + esc(d.see) + '</span><span class="is">' + esc(d.is) + '</span><span class="sec">' + esc(d.section.replace(/-/g, " ")) + "</span></a></li>";
+      }).join("");
+    }
+    q.addEventListener("input", function () { shown = 24; render(); });
+    more.addEventListener("click", function () { shown += 48; render(); });
+    render();
+  })();
+
+  /* festival finder */
+  (function () {
+    var data = readJSON("fd-data"), list = $("fd-list"); if (!list || !data.length) return;
+    var q = $("fd-q"), m = $("fd-m"), rg = $("fd-r"), cnt = $("fd-count");
+    var MO = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var onAll = !!document.getElementById("sec-history");
+    function render() {
+      var t = (q.value || "").toLowerCase(), mv = +m.value || 0, rv = rg.value;
+      var rows = data.filter(function (d) {
+        if (mv && (d.months || []).indexOf(mv) < 0) return false;
+        if (rv && d.region !== rv) return false;
+        if (t && JSON.stringify(d).toLowerCase().indexOf(t) < 0) return false;
+        return true;
+      });
+      cnt.textContent = rows.length + " of " + data.length + " festivals";
+      list.innerHTML = rows.map(function (d) {
+        var when = (d.months || []).map(function (x) { return MO[x - 1]; }).join(" / ");
+        return "<tr><td><b>" + esc(d.name) + "</b>" + (d.genre ? '<br><span class="s">' + esc(d.genre) + "</span>" : "") + "</td><td>" + esc(d.city || "") + (d.country ? ", " + esc(d.country) : "") +
+          "</td><td>" + esc(when) + "</td><td>" + esc(d.founded || "") + "</td><td>" + esc(d.capacity || "") + "</td><td>" + (d.camping === true ? "Yes" : d.camping === false ? "No" : "") +
+          (d.srcu ? ' <a class="s" href="' + esc(d.srcu) + '" target="_blank" rel="noopener">src</a>' : "") + "</td></tr>";
+      }).join("");
+    }
+    [q, m, rg].forEach(function (e) { e.addEventListener("input", render); e.addEventListener("change", render); });
+    render();
+  })();
+
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>

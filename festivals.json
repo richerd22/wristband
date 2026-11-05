@@ -1,0 +1,757 @@
+[
+ {
+  "name": "Coachella",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Indio, California (Empire Polo Club)",
+  "region": "North America",
+  "months": [
+   4
+  ],
+  "founded": 1999,
+  "capacity": "125,000 a day, city attendance cap (raised in 2016, Wikipedia)",
+  "camping": true,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "gf-f-wiki-coachella"
+ },
+ {
+  "name": "Ultra Music Festival",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Miami (Bayfront Park)",
+  "region": "North America",
+  "months": [
+   3
+  ],
+  "founded": 1999,
+  "capacity": "about 165,000 over three days (2026, Wikipedia)",
+  "camping": null,
+  "genre": "electronic",
+  "section": "season",
+  "key": "gf-f-wiki-ultra"
+ },
+ {
+  "name": "Governors Ball",
+  "country": "United States",
+  "country_code": "US",
+  "city": "New York City (Flushing Meadows Corona Park, Queens)",
+  "region": "North America",
+  "months": [
+   6
+  ],
+  "founded": 2011,
+  "capacity": "about 150,000 attendance (2015, Wikipedia)",
+  "camping": null,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "gf-f-wiki-govball"
+ },
+ {
+  "name": "Outside Lands",
+  "country": "United States",
+  "country_code": "US",
+  "city": "San Francisco (Golden Gate Park)",
+  "region": "North America",
+  "months": [
+   8
+  ],
+  "founded": 2008,
+  "capacity": "around 75,000 a day expected (2022, reported)",
+  "camping": null,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "gf-f-kron4-outsidelands-2022"
+ },
+ {
+  "name": "Austin City Limits Music Festival",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Austin, Texas (Zilker Park)",
+  "region": "North America",
+  "months": [
+   10
+  ],
+  "founded": 2002,
+  "capacity": "about 75,000 a day, 450,000 over six days (2025, Wikipedia)",
+  "camping": null,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "gf-f-wiki-acl"
+ },
+ {
+  "name": "Summer Sonic",
+  "country": "Japan",
+  "country_code": "JP",
+  "city": "Tokyo (ZOZO Marine Stadium and Makuhari Messe, Chiba) and Osaka (Expo '70 Commemorative Park)",
+  "region": "Asia",
+  "months": [
+   8
+  ],
+  "founded": 2000,
+  "capacity": "179,000 in Tokyo and 110,000 in Osaka (2026, organizer)",
+  "camping": null,
+  "genre": "rock, pop, multi-genre",
+  "section": "season",
+  "key": "gf-f-summersonic-2026"
+ },
+ {
+  "name": "Lowlands",
+  "country": "Netherlands",
+  "country_code": "NL",
+  "city": "Biddinghuizen",
+  "region": "Europe",
+  "months": [
+   8
+  ],
+  "founded": 1993,
+  "capacity": "65,000 (2025, Wikipedia)",
+  "camping": true,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "gf-f-wiki-lowlands"
+ },
+ {
+  "name": "Dekmantel",
+  "country": "Netherlands",
+  "country_code": "NL",
+  "city": "Amsterdam (Amsterdamse Bos)",
+  "region": "Europe",
+  "months": [
+   7,
+   8
+  ],
+  "founded": null,
+  "capacity": null,
+  "camping": true,
+  "genre": "electronic",
+  "section": "season",
+  "key": "gf-f-dekmantel-faq"
+ },
+ {
+  "name": "Hellfest",
+  "country": "France",
+  "country_code": "FR",
+  "city": "Clisson",
+  "region": "Europe",
+  "months": [
+   6
+  ],
+  "founded": 2006,
+  "capacity": "about 60,000 a day (2022, Wikipedia)",
+  "camping": null,
+  "genre": "metal, hard rock",
+  "section": "season",
+  "key": "gf-f-wiki-hellfest"
+ },
+ {
+  "name": "Wacken Open Air",
+  "country": "Germany",
+  "country_code": "DE",
+  "city": "Wacken, Schleswig-Holstein",
+  "region": "Europe",
+  "months": [
+   7,
+   8
+  ],
+  "founded": 1990,
+  "capacity": "about 85,000 paying attendees (2025, Wikipedia; its attendee column lists 68,000)",
+  "camping": true,
+  "genre": "metal",
+  "section": "season",
+  "key": "gf-f-wiki-wacken"
+ },
+ {
+  "name": "Glastonbury",
+  "country": "United Kingdom",
+  "country_code": "GB",
+  "city": "Worthy Farm, Somerset",
+  "region": "UK and Ireland",
+  "months": [
+   6
+  ],
+  "founded": 1970,
+  "capacity": "license for up to 210,000 on site incl. staff and performers (2025, reported)",
+  "camping": true,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "glo-ap-glastonbury-numbers-2025"
+ },
+ {
+  "name": "Reading and Leeds",
+  "country": "United Kingdom",
+  "country_code": "GB",
+  "city": "Reading (Richfield Avenue) and Leeds (Bramham Park)",
+  "region": "UK and Ireland",
+  "months": [
+   8
+  ],
+  "founded": null,
+  "capacity": null,
+  "camping": true,
+  "genre": "rock, multi-genre",
+  "section": "season",
+  "key": "gf-f-timeout-readingleeds-2026"
+ },
+ {
+  "name": "Tomorrowland",
+  "country": "Belgium",
+  "country_code": "BE",
+  "city": "Boom",
+  "region": "Europe",
+  "months": [
+   7
+  ],
+  "founded": 2005,
+  "capacity": "400,000 ticket holders over two weekends (2025, reported)",
+  "camping": true,
+  "genre": "electronic",
+  "section": "season",
+  "key": "glo-iq-tomorrowland-sellout-2025"
+ },
+ {
+  "name": "Rock Werchter",
+  "country": "Belgium",
+  "country_code": "BE",
+  "city": "Werchter (Festivalpark)",
+  "region": "Europe",
+  "months": [
+   7
+  ],
+  "founded": 1975,
+  "capacity": "nearly 90,000 a day (2025, reported)",
+  "camping": true,
+  "genre": "rock, multi-genre",
+  "section": "season",
+  "key": "glo-belga-belgium-summer-2025"
+ },
+ {
+  "name": "Pukkelpop",
+  "country": "Belgium",
+  "country_code": "BE",
+  "city": "Hasselt",
+  "region": "Europe",
+  "months": [
+   8
+  ],
+  "founded": null,
+  "capacity": "at least 66,000 a day over four days (2025, reported)",
+  "camping": null,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "glo-belga-belgium-summer-2025"
+ },
+ {
+  "name": "Primavera Sound Barcelona",
+  "country": "Spain",
+  "country_code": "ES",
+  "city": "Barcelona",
+  "region": "Europe",
+  "months": [
+   6
+  ],
+  "founded": 2001,
+  "capacity": "about 293,000 attendees (2025, organizer figure)",
+  "camping": null,
+  "genre": "indie, multi-genre",
+  "section": "season",
+  "key": "glo-catalannews-primavera-2025"
+ },
+ {
+  "name": "Primavera Sound Porto",
+  "country": "Portugal",
+  "country_code": "PT",
+  "city": "Porto (Parque da Cidade)",
+  "region": "Europe",
+  "months": [
+   6
+  ],
+  "founded": 2012,
+  "capacity": "over 110,000 attendees (2025, organizer preliminary count)",
+  "camping": null,
+  "genre": "indie, multi-genre",
+  "section": "season",
+  "key": "gf-f-rr-primavera-porto-2026"
+ },
+ {
+  "name": "FIB Benicàssim",
+  "country": "Spain",
+  "country_code": "ES",
+  "city": "Benicàssim",
+  "region": "Europe",
+  "months": [
+   7
+  ],
+  "founded": null,
+  "capacity": "more than 135,000 attendees (2024, reported)",
+  "camping": null,
+  "genre": "indie, multi-genre",
+  "section": "season",
+  "key": "glo-dod-fib-2024"
+ },
+ {
+  "name": "Mad Cool",
+  "country": "Spain",
+  "country_code": "ES",
+  "city": "Madrid",
+  "region": "Europe",
+  "months": [
+   7
+  ],
+  "founded": null,
+  "capacity": null,
+  "camping": null,
+  "genre": "rock, multi-genre",
+  "section": "season",
+  "key": "glo-elindependiente-madcool-2025"
+ },
+ {
+  "name": "Roskilde",
+  "country": "Denmark",
+  "country_code": "DK",
+  "city": "Roskilde",
+  "region": "Europe",
+  "months": [
+   6,
+   7
+  ],
+  "founded": 1971,
+  "capacity": "130,000+ attendance (2024, Wikipedia)",
+  "camping": true,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "glo-wiki-roskilde"
+ },
+ {
+  "name": "Sziget",
+  "country": "Hungary",
+  "country_code": "HU",
+  "city": "Budapest",
+  "region": "Europe",
+  "months": [
+   8
+  ],
+  "founded": null,
+  "capacity": "416,000 visitors over six days (2025, reported)",
+  "camping": null,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "glo-hungarytoday-sziget-2025"
+ },
+ {
+  "name": "Exit",
+  "country": "Serbia",
+  "country_code": "RS",
+  "city": "Novi Sad",
+  "region": "Europe",
+  "months": [
+   7
+  ],
+  "founded": 2000,
+  "capacity": null,
+  "camping": null,
+  "genre": "multi-genre, electronic",
+  "section": "season",
+  "key": "glo-mixmag-exit-serbia-2025"
+ },
+ {
+  "name": "Awakenings",
+  "country": "Netherlands",
+  "country_code": "NL",
+  "city": "Hilvarenbeek",
+  "region": "Europe",
+  "months": [
+   7
+  ],
+  "founded": null,
+  "capacity": "over 119,000 visitors, sold out (2026, organizer)",
+  "camping": null,
+  "genre": "techno",
+  "section": "season",
+  "key": "glo-mixmagnl-awakenings-2026"
+ },
+ {
+  "name": "Rock am Ring",
+  "country": "Germany",
+  "country_code": "DE",
+  "city": "Nürburgring",
+  "region": "Europe",
+  "months": [
+   6
+  ],
+  "founded": null,
+  "capacity": "90,000 tickets, sold out (2025, reported)",
+  "camping": null,
+  "genre": "rock",
+  "section": "season",
+  "key": "glo-iq-rock-am-ring-2025"
+ },
+ {
+  "name": "Fuji Rock",
+  "country": "Japan",
+  "country_code": "JP",
+  "city": "Naeba, Niigata",
+  "region": "Asia",
+  "months": [
+   7
+  ],
+  "founded": 1997,
+  "capacity": "122,000 over four days (2025, organizer)",
+  "camping": true,
+  "genre": "rock, multi-genre",
+  "section": "season",
+  "key": "glo-mixmagasia-fujirock-2025"
+ },
+ {
+  "name": "EDC Thailand",
+  "country": "Thailand",
+  "country_code": "TH",
+  "city": "Phuket",
+  "region": "Asia",
+  "months": [
+   1
+  ],
+  "founded": 2025,
+  "capacity": null,
+  "camping": null,
+  "genre": "electronic",
+  "section": "season",
+  "key": "glo-wiki-edc"
+ },
+ {
+  "name": "EDC China",
+  "country": "China",
+  "country_code": "CN",
+  "city": "Suzhou (Yang Cheng Lake); Shanghai in 2018",
+  "region": "Asia",
+  "months": [],
+  "founded": 2018,
+  "capacity": null,
+  "camping": null,
+  "genre": "electronic",
+  "section": "season",
+  "key": "glo-wiki-edc"
+ },
+ {
+  "name": "EDC Korea",
+  "country": "South Korea",
+  "country_code": "KR",
+  "city": "Incheon (Inspire Arena); Gwacheon in 2019",
+  "region": "Asia",
+  "months": [],
+  "founded": 2019,
+  "capacity": null,
+  "camping": null,
+  "genre": "electronic",
+  "section": "season",
+  "key": "glo-wiki-edc"
+ },
+ {
+  "name": "Splendour in the Grass",
+  "country": "Australia",
+  "country_code": "AU",
+  "city": "North Byron Parklands, NSW",
+  "region": "Oceania",
+  "months": [
+   7
+  ],
+  "founded": null,
+  "capacity": null,
+  "camping": null,
+  "genre": "multi-genre (canceled 2024 and 2025)",
+  "section": "season",
+  "key": "gf-f-aap-splendour-2025"
+ },
+ {
+  "name": "Laneway",
+  "country": "Australia",
+  "country_code": "AU",
+  "city": "Touring: Auckland, Gold Coast, Sydney, Melbourne, Adelaide, Perth",
+  "region": "Oceania",
+  "months": [
+   2
+  ],
+  "founded": null,
+  "capacity": null,
+  "camping": null,
+  "genre": "indie, multi-genre",
+  "section": "season",
+  "key": "glo-thenote-laneway-2026"
+ },
+ {
+  "name": "Rock in Rio",
+  "country": "Brazil",
+  "country_code": "BR",
+  "city": "Rio de Janeiro",
+  "region": "Latin America",
+  "months": [
+   9
+  ],
+  "founded": 1985,
+  "capacity": "over 11.2 million cumulative attendees since 1985 (as of 2024, reported)",
+  "camping": null,
+  "genre": "rock, pop, multi-genre",
+  "section": "season",
+  "key": "glo-eqi-rockinrio-2024"
+ },
+ {
+  "name": "Lollapalooza Argentina",
+  "country": "Argentina",
+  "country_code": "AR",
+  "city": "San Isidro, Buenos Aires",
+  "region": "Latin America",
+  "months": [
+   3
+  ],
+  "founded": null,
+  "capacity": null,
+  "camping": null,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "glo-prensamercosur-lolla-ar-2025"
+ },
+ {
+  "name": "EDC Mexico",
+  "country": "Mexico",
+  "country_code": "MX",
+  "city": "Mexico City (Autódromo Hermanos Rodríguez)",
+  "region": "Latin America",
+  "months": [
+   2,
+   3
+  ],
+  "founded": 2014,
+  "capacity": "about 120,000 (2019, Wikipedia)",
+  "camping": null,
+  "genre": "electronic",
+  "section": "season",
+  "key": "glo-wiki-edc"
+ },
+ {
+  "name": "Afro Nation Portugal",
+  "country": "Portugal",
+  "country_code": "PT",
+  "city": "Portimão",
+  "region": "Europe",
+  "months": [
+   7
+  ],
+  "founded": 2019,
+  "capacity": "about 40,000 from 140 countries (2023, Wikipedia)",
+  "camping": null,
+  "genre": "Afrobeats, amapiano, dancehall",
+  "section": "season",
+  "key": "glo-wiki-afronation"
+ },
+ {
+  "name": "Nyege Nyege",
+  "country": "Uganda",
+  "country_code": "UG",
+  "city": "Jinja",
+  "region": "Africa",
+  "months": [
+   11
+  ],
+  "founded": 2015,
+  "capacity": "about 20,000 (2023, reported)",
+  "camping": null,
+  "genre": "underground electronic",
+  "section": "season",
+  "key": "glo-ra-nyege-2024"
+ },
+ {
+  "name": "MDLBEAST Soundstorm",
+  "country": "Saudi Arabia",
+  "country_code": "SA",
+  "city": "Riyadh (Banban)",
+  "region": "Middle East",
+  "months": [
+   12
+  ],
+  "founded": null,
+  "capacity": "over 180,000 on day one (2021, reported)",
+  "camping": null,
+  "genre": "electronic, multi-genre",
+  "section": "season",
+  "key": "glo-aawsat-soundstorm-2021"
+ },
+ {
+  "name": "EDC Las Vegas",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Las Vegas (Las Vegas Motor Speedway)",
+  "region": "North America",
+  "months": [
+   5
+  ],
+  "founded": 1997,
+  "capacity": "over 525,000 over three nights (2024, reported)",
+  "camping": true,
+  "genre": "electronic",
+  "section": "season",
+  "key": "glo-news3lv-edc-2024"
+ },
+ {
+  "name": "EDC Orlando",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Orlando (Tinker Field)",
+  "region": "North America",
+  "months": [
+   11
+  ],
+  "founded": 2011,
+  "capacity": "about 300,000 (2023, Wikipedia)",
+  "camping": null,
+  "genre": "electronic",
+  "section": "season",
+  "key": "glo-wiki-edc"
+ },
+ {
+  "name": "Lollapalooza Chicago",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Chicago",
+  "region": "North America",
+  "months": [
+   7,
+   8
+  ],
+  "founded": 1991,
+  "capacity": "roughly 115,000 a day (2025, city figures)",
+  "camping": null,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "glo-groundnews-lolla-2025"
+ },
+ {
+  "name": "Bonnaroo",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Manchester, Tennessee",
+  "region": "North America",
+  "months": [
+   6
+  ],
+  "founded": 2002,
+  "capacity": "about 70,000 (2024, Wikipedia)",
+  "camping": true,
+  "genre": "multi-genre",
+  "section": "season",
+  "key": "glo-wiki-bonnaroo"
+ },
+ {
+  "name": "Burning Man",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Black Rock City, Nevada",
+  "region": "North America",
+  "months": [
+   8
+  ],
+  "founded": null,
+  "capacity": null,
+  "camping": null,
+  "genre": "participatory event (says it is not a festival)",
+  "section": "season",
+  "key": "glo-bmjournal-friends-2017"
+ },
+ {
+  "name": "Newport Folk Festival",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Newport, RI (Fort Adams State Park)",
+  "region": "North America",
+  "months": [
+   7
+  ],
+  "founded": 1959,
+  "capacity": "more than 10,000 expected per day (2026, reported)",
+  "camping": null,
+  "genre": "folk, Americana",
+  "section": "new-england",
+  "key": "ne-turnto10-folk-2026"
+ },
+ {
+  "name": "Newport Jazz Festival",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Newport, RI (Fort Adams State Park)",
+  "region": "North America",
+  "months": [
+   7,
+   8
+  ],
+  "founded": 1954,
+  "capacity": "Fort Adams capacity crowds of 10,000 (2023, state figure)",
+  "camping": null,
+  "genre": "jazz",
+  "section": "new-england",
+  "key": "ne-whatsupnewp-jazz-2026"
+ },
+ {
+  "name": "Boston Calling",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Boston (Allston)",
+  "region": "North America",
+  "months": [
+   5,
+   6
+  ],
+  "founded": 2013,
+  "capacity": null,
+  "camping": false,
+  "genre": "rock, pop, indie (no 2026 edition; organizers announced a June 4-6, 2027 return)",
+  "section": "new-england",
+  "key": "ne-globe-bc-2026"
+ },
+ {
+  "name": "Green River Festival",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Greenfield, MA",
+  "region": "North America",
+  "months": [
+   6
+  ],
+  "founded": 1986,
+  "capacity": "50+ bands on four stages (2026, reported); attendance not published",
+  "camping": true,
+  "genre": "Americana, indie, roots",
+  "section": "new-england",
+  "key": "ne-greenriver-history"
+ },
+ {
+  "name": "Solid Sound",
+  "country": "United States",
+  "country_code": "US",
+  "city": "North Adams, MA (MASS MoCA)",
+  "region": "North America",
+  "months": [
+   6
+  ],
+  "founded": 2010,
+  "capacity": "sold out at about 7,600 (2024, reported); held every two years",
+  "camping": null,
+  "genre": "rock, curated by Wilco",
+  "section": "new-england",
+  "key": "ne-wamc-solidsound-2024"
+ },
+ {
+  "name": "Levitate Music & Arts Festival",
+  "country": "United States",
+  "country_code": "US",
+  "city": "Marshfield, MA (Marshfield Fairgrounds)",
+  "region": "North America",
+  "months": [
+   7
+  ],
+  "founded": 2013,
+  "capacity": "about 20,000 per day (2023, reported); 'around 15,000' per a 2024 interview",
+  "camping": null,
+  "genre": "reggae, rock, jam",
+  "section": "new-england",
+  "key": "ne-wbur-levitate-2023"
+ }
+]
